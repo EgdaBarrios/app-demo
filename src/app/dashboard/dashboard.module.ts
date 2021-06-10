@@ -6,13 +6,17 @@ import { DashboardComponent } from './dashboard.component';
 import { HeaderComponent } from '../layouts/components/header/header.component';
 import { AsideComponent } from '../layouts/components/aside/aside.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { DriversComponent } from './drivers/drivers.component';
+import { ClientsComponent } from './clients/clients.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     HeaderComponent,
     AsideComponent,
-    HomeAdminComponent
+    HomeAdminComponent,
+    DriversComponent,
+    ClientsComponent
   ],
   imports: [
     CommonModule,
