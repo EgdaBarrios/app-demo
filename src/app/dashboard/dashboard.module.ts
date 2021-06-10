@@ -9,6 +9,7 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { DriversComponent } from './drivers/drivers.component';
 import { ClientsComponent } from './clients/clients.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AsideComponent,
     HomeAdminComponent,
     DriversComponent,
-    ClientsComponent
+    ClientsComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

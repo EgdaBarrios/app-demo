@@ -4,6 +4,7 @@ import { ClientsComponent } from './clients/clients.component';
 import { DashboardComponent } from './dashboard.component';
 import { DriversComponent } from './drivers/drivers.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'clients',
         component: ClientsComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
       }
     ]
   }
