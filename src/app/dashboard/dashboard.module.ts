@@ -8,6 +8,7 @@ import { AsideComponent } from '../layouts/components/aside/aside.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { DriversComponent } from './drivers/drivers.component';
 import { ClientsComponent } from './clients/clients.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ClientsComponent } from './clients/clients.component';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    NgbModule
   ]
 })
 export class DashboardModule { }
