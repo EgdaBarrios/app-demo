@@ -1,0 +1,12 @@
+.section {
+  width: 100%;
+  height: 100vh;
+}
+ul {
+  list-style-type:none;
+  padding: 0px;
+}
+.dashboard-item,
+.dashboard-item-header {
+  border-bottom: 1px solid rgb(61, 60, 60);
+}

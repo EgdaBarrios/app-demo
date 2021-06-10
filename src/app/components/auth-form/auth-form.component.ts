@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 import firebase from 'firebase';
 
 @Component({
@@ -14,10 +15,16 @@ export class AuthFormComponent implements OnInit {
   email = 'user@example.com';
   password = '123456';
 
-  constructor(public auth:AngularFireAuth) { }
+  constructor(
+    public auth:AngularFireAuth,
+    private router:Router) { }
 
   ngOnInit() {
     console.log(this.action);
+  }
+
+  redirect() {
+    this.router.navigate(['/dashboard/homeAdmin']);
   }
 
   loginWithGoogle() {
@@ -28,7 +35,7 @@ export class AuthFormComponent implements OnInit {
     firebase.auth().signInWithEmailAndPassword(this.email, this.password)
       .then((result) => {
         console.log(result);
-        // this.redirect();
+        this.redirect();
         // result.user.tenantId should be ‘TENANT_PROJECT_ID’.
       }).catch((error) => {
         console.log(error);
