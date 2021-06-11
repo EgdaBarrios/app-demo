@@ -7,15 +7,17 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li ngbDropdown class="nav-item dropdown">
-                <a ngbDropdownToggle class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  I am a LoggedUser
+                <a ngbDropdownToggle class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="auth.user | async as user">
+                  <code>{{user.email}}</code>
                 </a>
                 <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
                   <li>
                     <a class="dropdown-item" routerLink="/dashboard/profile">Profile</a>
                   </li>
                   <li><hr class="dropdown-divider"></li>
-                  <button type="button" class="btn btn-primary">Log out</button>
+                  <li>
+                    <a class="dropdown-item" (click)="onLogout()">Cerrar Sesión</a>
+                  </li>
                   <!--<button class="btn btn-danger" (click)="logout()">Log out</button>-->
                 </ul>
               </li>

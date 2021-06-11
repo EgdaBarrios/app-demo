@@ -1,3 +1,4 @@
+/*
 import { Component, Input, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
@@ -47,3 +48,4 @@ export class AuthFormComponent implements OnInit {
     this.auth.signOut();
   }
 }
+*/
