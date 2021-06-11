@@ -1,1 +1,33 @@
-<p>clients works!</p>
+<form>
+<div class="form-goup">
+    <div class="input-group">
+        <div class="input-group-text bg-white">
+            <i class="fas fa-search"></i>
+            </div>
+        <input type="text" name='filtrado' class="form-control"  placeholder="Usuario" [(ngModel)]='filtrado'>
+</div>
+</div>
+</form>
+
+ <div class="table-info">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nombres</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-light" *ngFor="let clients of Clientes |async| filter: filtrado" >
+      <th scope="row">{{clients.name}}&nbsp;{{clients.middle_name}}&nbsp;{{clients.last_name}}</th>
+      <td>{{clients.email}}</td>
+      <td>{{clients.phone_number}}</td>
+      <td>{{clients.status}}</td>
+      <td><button type="button" class="btn btn-primary">Editar</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>

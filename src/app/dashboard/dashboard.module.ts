@@ -10,7 +10,8 @@ import { DriversComponent } from './drivers/drivers.component';
 import { ClientsComponent } from './clients/clients.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from './profile/profile.component';
-
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -19,12 +20,14 @@ import { ProfileComponent } from './profile/profile.component';
     HomeAdminComponent,
     DriversComponent,
     ClientsComponent,
-    ProfileComponent
+    ProfileComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ]
 })
 export class DashboardModule { }
