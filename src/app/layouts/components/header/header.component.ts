@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthService } from 'src/app/auth/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,26 +9,15 @@ import { AuthService } from 'src/app/auth/services/auth.service';
   styleUrls: ['./header.component.css'],
   providers: [AuthService]
 })
-export class HeaderComponent implements OnInit {
-
-  public isLogged = false;
-  public user: any;
+export class HeaderComponent {
 
   constructor(
     private authService: AuthService,
-    public auth: AngularFireAuth) { }
-
-  ngOnInit() {
-    console.log('header');
-    this.user = this.authService.getCurrentUser();
-    if(this.user) {
-      this.isLogged = true;
-      // console.log(this.user);
-    }
-  }
-
+    public auth: AngularFireAuth,
+    private router:Router) { }
+  
   onLogout() {
-    this.authService.logout();
+    this.authService.logout()
+    this.router.navigate(['/auth']);
   }
-
 }

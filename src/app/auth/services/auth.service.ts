@@ -1,17 +1,12 @@
 import { Injectable } from '@angular/core';
 
-// import auth from 'firebase/app';
-import User from 'firebase';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase/app';
 import { Router } from '@angular/router';
-import { first } from 'rxjs/operators';
 
 @Injectable()
 
 export class AuthService {
-
-  public user: typeof User | undefined;
 
   constructor(
     public auth:AngularFireAuth,
@@ -48,12 +43,4 @@ export class AuthService {
         // Handle error.
     });
   };
-
-  getCurrentUser() {
-    this.auth.authState.pipe(first()).toPromise();
-  };
 }
-/*
-function first(): import("rxjs").OperatorFunction<User.User | null, unknown> {
-  throw new Error('Function not implemented.');
-}*/
