@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, PipeTransform } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./clients.component.css']
 })
 export class ClientsComponent implements OnInit {
-
+  
   Clients: Observable<any[]>;
 
   constructor(firestore: AngularFirestore) {
     this.Clients = firestore.collection('Clients').valueChanges();
   }
-
+  
   ngOnInit(): void {
   }
 
