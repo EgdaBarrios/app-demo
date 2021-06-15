@@ -10,6 +10,8 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
 // Forms
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -25,7 +27,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFirestoreModule
+    // AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

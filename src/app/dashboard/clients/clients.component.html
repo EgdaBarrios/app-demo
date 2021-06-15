@@ -1,1 +1,26 @@
-<p>clients works!</p>
+<div class="container">
+  <div class="container">
+    <h5 class="sectionTitle">Administración de Clientes</h5>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Nombre Completo</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let client of Clients | async">
+      <td>
+        {{ client.name }}&nbsp;{{client.middle_name}}&nbsp;{{client.last_name}}
+      </td>
+      <td>{{ client.status }}</td>
+      <td>
+        <button type="submit" class="btn btn-primary"><span class="bi-pencil-square"></span></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
