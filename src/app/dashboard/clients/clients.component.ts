@@ -14,6 +14,8 @@ export class ClientsComponent implements OnInit {
   constructor(firestore: AngularFirestore) {
     this.Clients = firestore.collection('Clients').valueChanges();
   }
+filtrado="";
+filtrado2="";
 
   ngOnInit(): void {
   }
