@@ -3,6 +3,23 @@
     <h5 class="sectionTitle">Administración de Clientes</h5>
   </div>
 
+  <div class="search  mb-4">
+    <form class="searchByName">
+      <span class="searchLabel">Clientes: </span>
+      <div class="form-group form-inline">
+        <input class="form-control ml-2" type="text"/>
+      </div>
+    </form>
+    <div class="searchByStatus">
+      <span class="searchLabel">Status: </span>
+      <select class="form-select form-select-md" aria-label=".form-select-sm example">
+        <option selected>---</option>
+        <option value="1">A</option>
+        <option value="2">I</option>
+      </select>
+    </div>
+  </div>
+  
   <table class="table table-striped">
     <thead>
     <tr>
@@ -14,7 +31,7 @@
     <tbody>
     <tr *ngFor="let client of Clients | async">
       <td>
-        {{ client.name }}&nbsp;{{client.middle_name}}&nbsp;{{client.last_name}}
+        {{ client.name }}&nbsp;{{ client.middle_name }}&nbsp;{{ client.last_name }}
       </td>
       <td>{{ client.status }}</td>
       <td>
