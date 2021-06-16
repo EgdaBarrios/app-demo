@@ -35,7 +35,7 @@
         <td>
           {{ client.name + ' ' + client.middle_name + ' ' + client.last_name  }}
         </td>
-        <td>{{ client.status }}</td>
+        <td>{{ client.status | pipestatus }}</td>
         <td class="edit-btn">
           <a 
             class="nav-link active"
