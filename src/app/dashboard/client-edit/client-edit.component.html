@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="container">
+    <h5 class="sectionTitle">Información del Cliente</h5>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="sectionLabel active" routerLinkActive="active">
+        <a class="nav-link active" aria-current="page" routerLink="/dashboard/client-edit">Generales</a>
+      </div>
+      <div class="sectionLabel unactive">
+        <a class="nav-link">Viajes</a>
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <div class="docType">
+          <span class="inputLabel">Tipo Doc</span>
+          <select class="form-select form-select-md" aria-label=".form-select-sm example">
+            <option selected value="">---</option>
+            <option>DNI</option>
+            <option>Carné de Extrangeria</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="docNum form-group form-inline mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="idSex">
+          <span class="inputLabel">Sexo</span>
+          <select class="form-select form-select-md" aria-label=".form-select-sm example">
+            <option selected value="">---</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="docState">
+          <span class="inputLabel">Estado</span>
+          <select class="form-select form-select-md" aria-label=".form-select-sm example">
+            <option selected value="">---</option>
+            <option>Activo</option>
+            <option>Inactivo</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="name form-group form-inline mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+          <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="">
+        </div>
+        <div class="name form-group form-inline mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
+          <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="">
+        </div>
+        <div class="name form-group form-inline mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
+          <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="name form-group form-inline mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
+          <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
+        </div>
+        <div class="name form-group form-inline mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Móvil</label>
+          <input type="number" class="form-control" id="exampleFormControlInput6" placeholder="">
+        </div>
+        <div class="name form-group form-inline mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="exampleFormControlInput7" placeholder="">
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class=" container navbar-nav-scroll">
+        <button type="submit" class="btn btn-primary"><span class="bi-save"></span> Guardar</button>
+      </div>
+    </footer>
+  </div>
+</div>

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ClientEditComponent } from './client-edit/client-edit.component';
+
 import { ClientsComponent } from './clients/clients.component';
 import { DashboardComponent } from './dashboard.component';
 import { DriversComponent } from './drivers/drivers.component';
@@ -28,6 +30,10 @@ const routes: Routes = [
         path: 'clients',
         component: ClientsComponent
       },
+      {
+        path: 'client-edit',
+        component: ClientEditComponent
+      },      
       {
         path: 'profile',
         component: ProfileComponent

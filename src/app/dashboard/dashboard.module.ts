@@ -16,6 +16,7 @@ import { FilterPipe } from './pipe/pipe-search/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { Filtrado2Pipe } from './pipe/pipe-searchStatus/filtrado2.pipe';
 import { PipestatusPipe } from './pipe/pipeStatus/pipestatus.pipe';
+import { ClientEditComponent } from './client-edit/client-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { PipestatusPipe } from './pipe/pipeStatus/pipestatus.pipe';
     ProfileComponent,
     FilterPipe,
     Filtrado2Pipe,
-    PipestatusPipe
+    PipestatusPipe,
+    ClientEditComponent   
+
   ],
   imports: [
     CommonModule,
