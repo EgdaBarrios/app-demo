@@ -15,18 +15,17 @@ export class ClientsComponent implements OnInit {
     this.Clients = firestore.collection('Clients').valueChanges();
   }
 
-  filtrado="";
-  filtrado2="";
-
-
-// #pipe para reconocer informacion - > return
+  // #pipe para reconocer informacion - > return
 
   ngOnInit(): void {
   }
 
-  onClear(text:any){
-    text='';
-    console.log("Borrando");
-    
+  filtrado="";
+  filtrado2="";
+
+  onClear(){
+    // text='';
+    // console.log("Borrando");
+    this.filtrado = ' ';
   }
 }

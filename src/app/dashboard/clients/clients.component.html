@@ -7,10 +7,9 @@
     <form class="searchByName">
       <span class="searchLabel">Clientes: </span>
       <div class="form-group form-inline">
-        <input class="form-control ml-2" type="text"  name ="filtrado" [(ngModel)]='filtrado'/>
-      <button type="onClear()">Limpiar</button>
+        <input class="form-control ml-2" type="text"  name ="filtrado" [(ngModel)]="filtrado"/>
+        <button type="button" class="btn btn-primary" (click)="onClear()">Limpiar</button>
       </div>
-
     </form>
     <div class="searchByStatus">
       <span class="searchLabel">Status: </span>

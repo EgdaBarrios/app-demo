@@ -7,9 +7,14 @@
   justify-content:space-between;
   align-items: center;
 }
-.searchByName,
+.searchByName {
+  width: 50%;
+}
 .searchByStatus {
   width: 40%;
+}
+.searchByName,
+.searchByStatus {
   display: flex;
   flex-direction: row;
   justify-content:center;
