@@ -6,20 +6,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(value:any,arg:any):any {
-    if (arg === '' || arg.length < 3) return value;
+    if (arg.length < 3) return value;
+        let fullname =[];
         const resultPosts2 = [];
         for (const clients of value) {
-          if (clients.status.indexOf(arg) > -1) {
+          fullname=clients.name.concat(' ',clients.middle_name + ' ' + clients.last_name)
+          if (fullname.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
             resultPosts2.push(clients);
-          };
-          if (clients.name.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
-            resultPosts2.push(clients);
-          };
-          if (clients.last_name.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
-            resultPosts2.push(clients);
-          };
-          if (clients.middle_name.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
-            resultPosts2.push(clients);
+            console.log("Busqueda Realizada :", resultPosts2);
+            console.log("Busqueda Realizada :", fullname);
           };
         }
           return resultPosts2;
