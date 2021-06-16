@@ -17,10 +17,7 @@
         <div class="docType">
           <span class="inputLabel">Tipo Doc</span>
           <select class="form-select form-select-md" aria-label=".form-select-sm example">
-            <option selected value="">---</option>
-            <option>DNI</option>
-            <option>Carné de Extrangeria</option>
-            <option>Otro</option>
+            <option *ngFor="let documentos of Documents | async" >{{documentos.type_name}}</option>
           </select>
         </div>
         <div class="docNum form-group form-inline mb-3">
@@ -30,10 +27,7 @@
         <div class="idSex">
           <span class="inputLabel">Sexo</span>
           <select class="form-select form-select-md" aria-label=".form-select-sm example">
-            <option selected value="">---</option>
-            <option>Masculino</option>
-            <option>Femenino</option>
-            <option>Otro</option>
+            <option *ngFor="let sex of Sex | async" >{{sex.sex_name}}</option>
           </select>
         </div>
         <div class="docState">

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-client-edit',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientEditComponent implements OnInit {
 
-  constructor() { }
+  Documents: Observable<any[]>;
+  Sex:Observable<any[]>;
+
+  constructor(firestore: AngularFirestore) {
+    this.Documents = firestore.collection('DocumentTypes').valueChanges();
+    this.Sex = firestore.collection('Sex').valueChanges();
+  }
 
   ngOnInit(): void {
   }
