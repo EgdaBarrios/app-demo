@@ -31,11 +31,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let client of Clients | async |  filter: filtrado | filtrado2: filtrado2">
+    <tr *ngFor="let client of Clients | async |  filter: filtrado | filtrado2: filtrado2 ">
       <td>
         {{ client.name + ' ' + client.middle_name + ' ' + client.last_name  }}
       </td>
-      <td>{{ client.status }}</td>
+      <td>{{ client.status | pipestatus }}</td>
       <td>
         <button type="submit" class="btn btn-primary"><span class="bi-pencil-square"></span></button>
       </td>

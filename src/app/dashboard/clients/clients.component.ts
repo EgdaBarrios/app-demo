@@ -17,8 +17,15 @@ export class ClientsComponent implements OnInit {
 filtrado="";
 filtrado2="";
 
+
+// #pipe para reconocer informacion - > return
+
   ngOnInit(): void {
   }
 
-
+  onClear(text:any){
+    text='';
+    console.log("Borrando");
+    
+  }
 }

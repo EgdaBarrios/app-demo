@@ -12,9 +12,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from '../layouts/components/header/header.component';
 import { AsideComponent } from '../layouts/components/aside/aside.component';
-import { FilterPipe } from './pipes/filter.pipe';
+import { FilterPipe } from './pipe/pipe-search/filter.pipe';
 import { FormsModule } from '@angular/forms';
-import { Filtrado2Pipe } from './pipes2/filtrado2.pipe';
+import { Filtrado2Pipe } from './pipe/pipe-searchStatus/filtrado2.pipe';
+import { PipestatusPipe } from './pipe/pipeStatus/pipestatus.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Filtrado2Pipe } from './pipes2/filtrado2.pipe';
     ClientsComponent,
     ProfileComponent,
     FilterPipe,
-    Filtrado2Pipe
+    Filtrado2Pipe,
+    PipestatusPipe
   ],
   imports: [
     CommonModule,
