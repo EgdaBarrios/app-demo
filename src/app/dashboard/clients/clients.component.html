@@ -7,15 +7,17 @@
     <form class="searchByName">
       <span class="searchLabel">Clientes: </span>
       <div class="form-group form-inline">
-        <input class="form-control ml-2" type="text"/>
+        <input class="form-control ml-2" type="text"  name ="filtrado" [(ngModel)]='filtrado'/>
+      <button type="onClear()">Limpiar</button>
       </div>
+
     </form>
     <div class="searchByStatus">
       <span class="searchLabel">Status: </span>
-      <select class="form-select form-select-md" aria-label=".form-select-sm example">
-        <option selected>---</option>
-        <option value="1">A</option>
-        <option value="2">I</option>
+      <select class="form-select form-select-md" aria-label=".form-select-sm example" name ="filtrado2" [(ngModel)]='filtrado2'>
+        <option selected value="">---</option>
+        <option value="A">Activo</option>
+        <option value="I">Inactivo</option>
       </select>
     </div>
   </div>
@@ -29,7 +31,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let client of Clients | async">
+    <tr *ngFor="let client of Clients | async |  filter: filtrado | filtrado2: filtrado2">
       <td>
         {{ client.name }}&nbsp;{{ client.middle_name }}&nbsp;{{ client.last_name }}
       </td>

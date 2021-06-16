@@ -12,6 +12,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from '../layouts/components/header/header.component';
 import { AsideComponent } from '../layouts/components/aside/aside.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
+import { Filtrado2Pipe } from './pipes2/filtrado2.pipe';
+import { ClientEditComponent } from './client-edit/client-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,16 @@ import { AsideComponent } from '../layouts/components/aside/aside.component';
     HomeAdminComponent,
     DriversComponent,
     ClientsComponent,
-    ProfileComponent
+    ProfileComponent,
+    FilterPipe,
+    Filtrado2Pipe,
+    ClientEditComponent   
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ]
 })
 export class DashboardModule { }
