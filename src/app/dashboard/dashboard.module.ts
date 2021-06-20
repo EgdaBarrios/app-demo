@@ -13,7 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from '../layouts/components/header/header.component';
 import { AsideComponent } from '../layouts/components/aside/aside.component';
 import { FilterPipe } from './pipe/pipe-search/filter.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Filtrado2Pipe } from './pipe/pipe-searchStatus/filtrado2.pipe';
 import { PipestatusPipe } from './pipe/pipeStatus/pipestatus.pipe';
 import { ClientEditComponent } from './client-edit/client-edit.component';
@@ -30,14 +30,15 @@ import { ClientEditComponent } from './client-edit/client-edit.component';
     FilterPipe,
     Filtrado2Pipe,
     PipestatusPipe,
-    ClientEditComponent   
+    ClientEditComponent,  
 
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class DashboardModule { }

@@ -12,24 +12,25 @@
         <a class="nav-link">Viajes</a>
       </div>
     </header>
-    <main>
+    <main> 
+    <form [formGroup]="editClient">
       <div class="row">
-        <div class="docType">
+        <!--<div class="docType">
           <span class="inputLabel">Tipo Doc</span>
           <select class="form-select form-select-md" aria-label=".form-select-sm example">
             <option *ngFor="let documentos of Documents | async" >{{documentos.type_name}}</option>
-          </select>
-        </div>
+          </select> 
+        </div> -->
         <div class="docNum form-group form-inline mb-3">
           <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+          <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="nro_document" placeholder="">
         </div>
-        <div class="idSex">
+        <!--<div class="idSex">
           <span class="inputLabel">Sexo</span>
           <select class="form-select form-select-md" aria-label=".form-select-sm example">
             <option *ngFor="let sex of Sex | async" >{{sex.sex_name}}</option>
           </select>
-        </div>
+        </div> -->
         <div class="docState">
           <span class="inputLabel">Estado</span>
           <select class="form-select form-select-md" aria-label=".form-select-sm example">
@@ -42,15 +43,15 @@
       <div class="row">
         <div class="name form-group form-inline mb-3">
           <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-          <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="">
+          <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="name" placeholder="">
         </div>
         <div class="name form-group form-inline mb-3">
           <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
-          <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="">
+          <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name" placeholder="">
         </div>
         <div class="name form-group form-inline mb-3">
           <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
-          <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="">
+          <input type="text" class="form-control" id="exampleFormControlInput4" formControlName="last_name" placeholder="">
         </div>
       </div>
       <div class="row">
@@ -60,17 +61,18 @@
         </div>
         <div class="name form-group form-inline mb-3">
           <label for="exampleFormControlInput1" class="form-label">Móvil</label>
-          <input type="number" class="form-control" id="exampleFormControlInput6" placeholder="">
+          <input type="string" class="form-control" id="exampleFormControlInput6" formControlName="phone_number" placeholder="">
         </div>
         <div class="name form-group form-inline mb-3">
           <label for="exampleFormControlInput1" class="form-label">Correo</label>
-          <input type="email" class="form-control" id="exampleFormControlInput7" placeholder="">
+          <input type="email" class="form-control" id="exampleFormControlInput7" formControlName="email" placeholder="">
         </div>
       </div>
+      </form>
     </main>
     <footer>
       <div class=" container navbar-nav-scroll">
-        <button type="submit" class="btn btn-primary"><span class="bi-save"></span> Guardar</button>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()"><span class="bi-save"></span> Guardar</button>
       </div>
     </footer>
   </div>

@@ -31,7 +31,7 @@ const routes: Routes = [
         component: ClientsComponent
       },
       {
-        path: 'client-edit',
+        path: 'client-edit/:id',
         component: ClientEditComponent
       },      
       {
