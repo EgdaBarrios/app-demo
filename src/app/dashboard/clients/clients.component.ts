@@ -1,6 +1,6 @@
 import { Component, OnInit, PipeTransform } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { ClientsService } from 'src/app/services/clients.service';
 
 @Component({
   selector: 'app-clients',
@@ -8,24 +8,35 @@ import { Observable } from 'rxjs';
   styleUrls: ['./clients.component.css'],
 })
 export class ClientsComponent implements OnInit {
-  
-  Clients: Observable<any[]>;
+  Clientes:any[]=[];
+  constructor(private _ClientServices: ClientsService) {
 
-  constructor(firestore: AngularFirestore) {
-    this.Clients = firestore.collection('Clients').valueChanges();
   }
 
-  // #pipe para reconocer informacion - > return
-
+  
   ngOnInit(): void {
+    this.getClients()
   }
 
   filtrado="";
   filtrado2="";
 
+
   onClear(){
-    // text='';
-    // console.log("Borrando");
     this.filtrado = ' ';
   }
+
+  getClients(){
+    this._ClientServices.getEmpleados().subscribe(data=>{
+      this.Clientes = [];
+      data.forEach((element:any)=>{
+        this.Clientes.push({
+          id:element.payload.doc.id,
+          ...element.payload.doc.data()
+        })
+      });
+      console.log("Nuevos:",this.Clientes);
+    });
+  }
+
 }
