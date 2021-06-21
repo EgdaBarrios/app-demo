@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { Filtrado2Pipe } from './pipe/pipe-searchStatus/filtrado2.pipe';
 import { PipestatusPipe } from './pipe/pipeStatus/pipestatus.pipe';
 import { ClientEditComponent } from './client-edit/client-edit.component';
+import { ClientListComponent } from './client-list/client-list.component';
+import { ClientDataEditComponent } from './client-data-edit/client-data-edit.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ClientEditComponent } from './client-edit/client-edit.component';
     FilterPipe,
     Filtrado2Pipe,
     PipestatusPipe,
-    ClientEditComponent   
+    ClientEditComponent,
+    ClientListComponent,
+    ClientDataEditComponent   
 
   ],
   imports: [
