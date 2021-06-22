@@ -7,6 +7,7 @@ import { DriversComponent } from './drivers/drivers.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ClientEditComponent } from './client-edit/client-edit.component';
+import { ClientTravelsComponent } from './client-travels/client-travels.component';
 
 import { ClientListComponent } from './client-list/client-list.component';
 import { ClientDataEditComponent } from './client-data-edit/client-data-edit.component';
@@ -34,8 +35,12 @@ const routes: Routes = [
         component: ClientsComponent
       },
       {
-        path: 'client-edit',
+        path: 'client-edit/:id',
         component: ClientEditComponent
+      },
+      {
+        path: 'client-travels/:id',
+        component: ClientTravelsComponent
       },
       // Path 2
       {

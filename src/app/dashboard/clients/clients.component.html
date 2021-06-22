@@ -30,16 +30,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let client of Clients | async |  filter: filtrado | filtrado2: filtrado2">
+      <tr *ngFor="let client of Clientes |  filter: filtrado | filtrado2: filtrado2 ">
         <td>
-          {{ client.name + ' ' + client.middle_name + ' ' + client.last_name  }}
+          {{ client.name + ' ' + client.middle_name + ' ' + client.last_name}}
         </td>
-        <td>{{ client.status | pipestatus }}</td>
-        <td class="edit-btn">
+        <td>{{ client.status | pipestatus}}</td>
+        <td class="edit-btn" >
           <a 
             class="nav-link active"
             aria-current="page"
-            routerLink="/dashboard/client-edit"
+            [routerLink]="['/dashboard/client-edit',client.id]"
           >
             <span class="bi-pencil-square"></span>
           </a>

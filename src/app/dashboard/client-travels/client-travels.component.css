@@ -1,0 +1,72 @@
+.sectionTitle {
+  padding: 30px 10px;
+}
+header {
+  width: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.sectionLabel {
+  width: 15%;
+  margin: 0px 5px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 0 20px 0 0;
+}
+.active {
+  background-color: rgb(232, 235, 235);
+}
+.unactive {
+  background-color: rgb(209, 212, 212);
+}
+main,
+footer {
+  background-color: rgb(209, 212, 212);
+}
+.row {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.client-fullName {
+  width: 60%;
+  margin: 0;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: flex-start;
+}
+.full-width {
+  width: 100%;
+}
+.travel-state {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: flex-start;
+}
+.serach-btn {
+  width: 10%;
+}
+.btn {
+  width: 100%;
+  margin-top: 22px;
+}/*
+.table {
+  width: 96%;
+  margin: 22px;
+}*/
+.w-b {
+  border: 1px solid rgb(134, 133, 133);
+  box-sizing: border-box;
+}
