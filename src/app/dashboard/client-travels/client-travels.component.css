@@ -22,8 +22,8 @@ header {
 .unactive {
   background-color: rgb(209, 212, 212);
 }
-main,
-footer {
+main {
+  height: 500px;
   background-color: rgb(209, 212, 212);
 }
 .row {

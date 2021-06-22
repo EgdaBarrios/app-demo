@@ -12,11 +12,25 @@
   height: 100vh;
 }
 .hero {
-  background-color: rgb(192, 190, 187);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(29, 29, 28);
+}
+.image {
+  width: 100%;
+  height: auto;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;

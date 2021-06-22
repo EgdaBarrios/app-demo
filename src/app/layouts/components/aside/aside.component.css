@@ -1,6 +1,12 @@
 .section {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  color: rgb(167, 164, 164);
+}
+.navbar-brand {
+  width: 100%;
+  height: 100px;
+  padding-top: 20px;
 }
 ul {
   list-style-type:none;
@@ -8,5 +14,29 @@ ul {
 }
 .dashboard-item,
 .dashboard-item-header {
-  border-bottom: 1px solid rgb(97, 95, 95);
+  border-bottom: 1px dotted rgb(97, 95, 95);
+}
+.dashboard-item {
+  height: 50px;
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(224, 219, 219);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(164, 167, 164);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(224, 219, 219);
+  background-color: rgb(42, 42, 42);
+}
+
+/* selected link */
+a:active {
+  color: rgb(243, 130, 24);
 }
