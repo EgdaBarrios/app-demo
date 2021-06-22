@@ -8,9 +8,7 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ClientTravelsComponent } from './client-travels/client-travels.component';
-
 import { ClientListComponent } from './client-list/client-list.component';
-import { ClientDataEditComponent } from './client-data-edit/client-data-edit.component';
 
 const routes: Routes = [
   {
@@ -47,10 +45,6 @@ const routes: Routes = [
         path: 'client-list',
         component: ClientListComponent
       },
-      {
-        path: 'client-dataEdit',
-        component: ClientDataEditComponent
-      },  
       //---------    
       {
         path: 'profile',

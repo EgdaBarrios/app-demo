@@ -28,6 +28,6 @@ export class LoginComponent implements OnInit {
     const { email, password } = this.loginForm.value;
     this.authService.login(email, password);
     this.router.navigate(['/dashboard/homeAdmin']);
-    console.log('logged in');
+    console.log('logged in52525');
   }
 }

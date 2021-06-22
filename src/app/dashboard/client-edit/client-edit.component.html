@@ -39,50 +39,41 @@
             </select>
           </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="name form-group form-inline mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+          <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="name" placeholder="">
+        </div>
+        <div class="name form-group form-inline mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
+          <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name" placeholder="">
+        </div>
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
+            <input type="text" class="form-control" id="exampleFormControlInput4" formControlName="last_name" placeholder="">
+          </div>
         <div class="row">
           <div class="name form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="name" placeholder="">
+            <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
+            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
           </div>
           <div class="name form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name" placeholder="">
+            <label for="exampleFormControlInput1" class="form-label">Móvil</label>
+            <input type="string" class="form-control" id="exampleFormControlInput6" formControlName="phone_number" placeholder="">
           </div>
-          <div class="row">
-            <div class="name form-group form-inline mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-              <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="name" placeholder="">
-            </div>
-            <div class="name form-group form-inline mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
-              <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name" placeholder="">
-            </div>
-            <div class="name form-group form-inline mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
-              <input type="text" class="form-control" id="exampleFormControlInput4" formControlName="last_name" placeholder="">
-            </div>
-          </div>
-          <div class="row">
-            <div class="name form-group form-inline mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
-              <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
-            </div>
-            <div class="name form-group form-inline mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Móvil</label>
-              <input type="string" class="form-control" id="exampleFormControlInput6" formControlName="phone_number" placeholder="">
-            </div>
-            <div class="name form-group form-inline mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Correo</label>
-              <input type="email" class="form-control" id="exampleFormControlInput7" formControlName="email" placeholder="">
-            </div>
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="exampleFormControlInput7" formControlName="email" placeholder="">
           </div>
         </div>
       </form>
     </main>
     <footer>
       <div class=" container navbar-nav-scroll">
-        <button type="submit" class="btn btn-primary" (click)="onSubmit()"><span class="bi-save"></span> Guardar</button>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()"><span class="bi-save"></span>Guardar</button>
       </div>
     </footer>
   </div>
 </div>
+

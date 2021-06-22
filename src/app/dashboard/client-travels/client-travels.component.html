@@ -13,19 +13,19 @@
       </div>
     </header>
     <main> 
-      <form>
+       <form [formGroup]="fullnameClient">
         <div class="row">
-          <div class="client-fullName form-group form-inline mb-3">
+          <div class="client-fullName form-group form-inline mb-3" >
             <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control full-width">
+            <input type="text" class="form-control full-width" formControlName="fullname">
           </div>
           <div class="travel-state">
             <span class="inputLabel">Estado</span>
-            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" name ="filtrado2" [(ngModel)]='filtrado2' [ngModelOptions]="{standalone: true}">
               <option selected value="">---</option>
-              <option>Finalizado</option>
-              <option>Cancelado/usuario</option>
-              <option>Cancelado/conductor</option>
+              <option value="1">Finalizado</option>
+              <option value="2">Cancelado/usuario</option>
+              <option value="3">Cancelado/conductor</option>
             </select>
           </div>
           <div class="serach-btn">
@@ -33,7 +33,6 @@
           </div>
         </div>
       </form>
-
       <div class="row">
         <div class="w-b">
           <h6>Historial de Viajes</h6>
@@ -49,13 +48,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr *ngFor="let client of Clientes | filtrado2: filtrado2">
+                <td>{{client.date_travel.toDate() |date: 'dd,MM,yyyy HH:mm'}}</td>
+                <td>{{client.origin_address}}</td>
+                <td>{{client.destination_address}}</td>
+                <td>{{client.travel_price}}</td>
+                <td>{{client.status | pipeStatus2}}</td>
+                <td>{{client.ids}}</td>
               </tr>
             </tbody>
           </table>
