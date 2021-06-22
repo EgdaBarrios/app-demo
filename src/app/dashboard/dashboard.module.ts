@@ -22,6 +22,7 @@ import { ClientDataEditComponent } from './client-data-edit/client-data-edit.com
 import { ClientTravelsComponent } from './client-travels/client-travels.component';
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -44,7 +45,8 @@ import { ClientTravelsComponent } from './client-travels/client-travels.componen
     DashboardRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ]
 })
 export class DashboardModule { }

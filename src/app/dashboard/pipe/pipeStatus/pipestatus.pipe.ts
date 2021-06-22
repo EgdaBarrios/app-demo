@@ -13,6 +13,10 @@ export class PipestatusPipe implements PipeTransform {
         return "Activo";    
       case "I":
         return "Inactivo";
+        case "1":
+          return "Masculino";
+          case "2":
+            return "Femenino";
       default: 
         return "Null";
     }
