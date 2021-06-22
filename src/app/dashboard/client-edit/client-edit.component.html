@@ -13,40 +13,31 @@
       </div>
     </header>
     <main> 
-    <form [formGroup]="editClient">
-      <div class="row">
-        <div class="docType">
-          <span class="inputLabel">Tipo Doc</span>
-          <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="documentValue" formControlName="type_id">
-            <option *ngFor="let documentos of Documents | async" [value]="documentos.type_id" >{{documentos.type_name}}</option>
-          </select> 
-        </div>
-        <div class="docNum form-group form-inline mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="nro_document" placeholder="">
-        </div>
-        <div class="idSex">
-          <span class="inputLabel">Sexo</span> 
-          <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="Sexvalue" formControlName="sex_id">
-            <option *ngFor="let sex of Sex  | async" [value]="sex.sex_id" >{{sex.sex_name}}</option>
-          </select>
-        </div>
-       <div class="docState">
-          <span class="inputLabel">Estado</span>
-          <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="statusValue" formControlName="status" >
-          <option value="A">Activo</option>
-          <option value="I">Inactivo</option>
+      <form [formGroup]="editClient">
+        <div class="row">
+          <div class="docType">
+            <span class="inputLabel">Tipo Doc</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="documentValue" formControlName="type_id">
+              <option *ngFor="let documentos of Documents | async" [value]="documentos.type_id" >{{documentos.type_name}}</option>
+            </select> 
+          </div>
+          <div class="docNum form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="nro_document" placeholder="">
+          </div>
+          <div class="idSex">
+            <span class="inputLabel">Sexo</span> 
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="Sexvalue" formControlName="sex_id">
+              <option *ngFor="let sex of Sex  | async" [value]="sex.sex_id" >{{sex.sex_name}}</option>
             </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="name form-group form-inline mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-          <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="name" placeholder="">
-        </div>
-        <div class="name form-group form-inline mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
-          <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name" placeholder="">
+          </div>
+          <div class="docState">
+            <span class="inputLabel">Estado</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="statusValue" formControlName="status" >
+              <option value="A">Activo</option>
+              <option value="I">Inactivo</option>
+            </select>
+          </div>
         </div>
         <div class="row">
           <div class="name form-group form-inline mb-3">
@@ -57,23 +48,33 @@
             <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
             <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name" placeholder="">
           </div>
-          <div class="name form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
-            <input type="text" class="form-control" id="exampleFormControlInput4" formControlName="last_name" placeholder="">
+          <div class="row">
+            <div class="name form-group form-inline mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="name" placeholder="">
+            </div>
+            <div class="name form-group form-inline mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
+              <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name" placeholder="">
+            </div>
+            <div class="name form-group form-inline mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
+              <input type="text" class="form-control" id="exampleFormControlInput4" formControlName="last_name" placeholder="">
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="name form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
-            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
-          </div>
-          <div class="name form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Móvil</label>
-            <input type="string" class="form-control" id="exampleFormControlInput6" formControlName="phone_number" placeholder="">
-          </div>
-          <div class="name form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Correo</label>
-            <input type="email" class="form-control" id="exampleFormControlInput7" formControlName="email" placeholder="">
+          <div class="row">
+            <div class="name form-group form-inline mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
+              <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
+            </div>
+            <div class="name form-group form-inline mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Móvil</label>
+              <input type="string" class="form-control" id="exampleFormControlInput6" formControlName="phone_number" placeholder="">
+            </div>
+            <div class="name form-group form-inline mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="exampleFormControlInput7" formControlName="email" placeholder="">
+            </div>
           </div>
         </div>
       </form>
