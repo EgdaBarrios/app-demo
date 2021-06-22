@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="container">
+    <h5 class="sectionTitle">Información del Cliente</h5>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="sectionLabel active" routerLinkActive="active">
+        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/client-edit',id]">Generales</a>
+      </div>
+      <div class="sectionLabel unactive">
+        <a class="nav-link" [routerLink]="['/dashboard/client-travels',id]">Viajes</a>
+      </div>
+    </header>
+    <main> 
+       <form [formGroup]="fullnameClient">
+        <div class="row">
+          <div class="client-fullName form-group form-inline mb-3" >
+            <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control full-width" formControlName="fullname">
+          </div>
+          <div class="travel-state">
+            <span class="inputLabel">Estado</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" name ="filtrado2" [(ngModel)]='filtrado2' [ngModelOptions]="{standalone: true}">
+              <option selected value="">---</option>
+              <option value="1">Finalizado</option>
+              <option value="2">Cancelado/usuario</option>
+              <option value="3">Cancelado/conductor</option>
+            </select>
+          </div>
+          <div class="serach-btn">
+            <button type="button" class="btn btn-primary"><span class="bi-search"></span></button>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="w-b">
+          <h6>Historial de Viajes</h6>
+          <table class="table table-sm table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Fch Hora de Viaje</th>
+                <th scope="col">Orígen</th>
+                <th scope="col">Destino</th>
+                <th scope="col">Importe</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Calificación</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let client of Clientes | filtrado2: filtrado2">
+                <td>{{client.date_travel.toDate() |date: 'dd,MM,yyyy HH:mm'}}</td>
+                <td>{{client.origin_address}}</td>
+                <td>{{client.destination_address}}</td>
+                <td>{{client.travel_price}}</td>
+                <td>{{client.status | pipeStatus2}}</td>
+                <td>{{client.ids}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>      
+    </main>
+  </div>
+</div>

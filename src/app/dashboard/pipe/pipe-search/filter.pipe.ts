@@ -13,8 +13,6 @@ export class FilterPipe implements PipeTransform {
           fullname=clients.name.concat(' ',clients.middle_name + ' ' + clients.last_name)
           if (fullname.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
             resultPosts2.push(clients);
-            console.log("Busqueda Realizada :", resultPosts2);
-            console.log("Busqueda Realizada :", fullname);
           };
         }
           return resultPosts2;

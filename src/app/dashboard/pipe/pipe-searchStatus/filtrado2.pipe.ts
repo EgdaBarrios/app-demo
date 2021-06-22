@@ -12,11 +12,10 @@ export class Filtrado2Pipe implements PipeTransform {
         for (const clients of value) {
           if (clients.status.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
             resultPosts.push(clients);
-            console.log('IF: ',resultPosts);
           };
         }
           return resultPosts;
-          console.log('return: ',resultPosts);
       }
+      
 
 }

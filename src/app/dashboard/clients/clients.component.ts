@@ -27,7 +27,7 @@ export class ClientsComponent implements OnInit {
   }
 
   getClients(){
-    this._ClientServices.getEmpleados().subscribe(data=>{
+    this._ClientServices.getClients().subscribe(data=>{
       this.Clientes = [];
       data.forEach((element:any)=>{
         this.Clientes.push({
@@ -35,7 +35,6 @@ export class ClientsComponent implements OnInit {
           ...element.payload.doc.data()
         })
       });
-      console.log("Nuevos:",this.Clientes);
     });
   }
 

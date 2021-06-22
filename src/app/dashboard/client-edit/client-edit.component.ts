@@ -56,7 +56,7 @@ export class ClientEditComponent implements OnInit {
 
   edit(){
     if(this.id !== null){
-      this._ClientService.getEmpleado(this.id).subscribe(data=>{
+      this._ClientService.getClient(this.id).subscribe(data=>{
         this.editClient.setValue({
           name:data.payload.data()['name'],
           middle_name:data.payload.data()['middle_name'],
@@ -101,16 +101,15 @@ export class ClientEditComponent implements OnInit {
   }
   Attributes() {
     if(this.id !== null){
-      this.Sexvalue=this._ClientService.getEmpleado(this.id).subscribe(data=>{
-        data.payload.data()['sex_id']
+      this.Sexvalue=this._ClientService.getClient(this.id).subscribe(data=>{
+       data.payload.data()['sex_id']
       })
-      this.statusValue=this._ClientService.getEmpleado(this.id).subscribe(data=>{
+      this.statusValue=this._ClientService.getClient(this.id).subscribe(data=>{
         data.payload.data()['status']
       })
-      this.documentValue=this._ClientService.getEmpleado(this.id).subscribe(data=>{
+      this.documentValue=this._ClientService.getClient(this.id).subscribe(data=>{
         data.payload.data()['nro_document']
       })
-      console.log("Mijael",this.Sexvalue,this.statusValue,this.documentValue)
     }
   }
 
@@ -132,7 +131,7 @@ export class ClientEditComponent implements OnInit {
       status: this.editClient.value.status, 
       type_id: this.editClient.value.type_id 
     }
-    this._ClientService.actualizarEmpleado(id, empleado).then(()=>{
+    this._ClientService.updateClient(id, empleado).then(()=>{
       this.router.navigate(['/dashboard/clients']);
     });
   }
