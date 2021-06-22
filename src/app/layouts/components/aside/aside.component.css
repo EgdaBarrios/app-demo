@@ -8,5 +8,13 @@ ul {
 }
 .dashboard-item,
 .dashboard-item-header {
-  border-bottom: 1px solid rgb(97, 95, 95);
+  border-bottom: 1px solid rgb(207, 51, 51);
+}
+.section {
+  background: rgb(211, 144, 58);
+}
+.nav-link{
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(211, 241, 37);
 }
