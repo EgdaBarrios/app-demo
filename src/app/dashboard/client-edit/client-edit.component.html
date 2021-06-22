@@ -15,29 +15,28 @@
     <main> 
     <form [formGroup]="editClient">
       <div class="row">
-        <!--<div class="docType">
+        <div class="docType">
           <span class="inputLabel">Tipo Doc</span>
-          <select class="form-select form-select-md" aria-label=".form-select-sm example">
-            <option *ngFor="let documentos of Documents | async" >{{documentos.type_name}}</option>
+          <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="documentValue" formControlName="type_id">
+            <option *ngFor="let documentos of Documents | async" [value]="documentos.type_id" >{{documentos.type_name}}</option>
           </select> 
-        </div> -->
+        </div>
         <div class="docNum form-group form-inline mb-3">
           <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
           <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="nro_document" placeholder="">
         </div>
-        <!--<div class="idSex">
-          <span class="inputLabel">Sexo</span>
-          <select class="form-select form-select-md" aria-label=".form-select-sm example">
-            <option *ngFor="let sex of Sex | async" >{{sex.sex_name}}</option>
+        <div class="idSex">
+          <span class="inputLabel">Sexo</span> 
+          <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="Sexvalue" formControlName="sex_id">
+            <option *ngFor="let sex of Sex  | async" [value]="sex.sex_id" >{{sex.sex_name}}</option>
           </select>
-        </div> -->
-        <div class="docState">
+        </div>
+       <div class="docState">
           <span class="inputLabel">Estado</span>
-          <select class="form-select form-select-md" aria-label=".form-select-sm example">
-            <option selected value="">---</option>
-            <option>Activo</option>
-            <option>Inactivo</option>
-          </select>
+          <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="statusValue" formControlName="status" >
+          <option value="A">Activo</option>
+          <option value="I">Inactivo</option>
+            </select>
         </div>
       </div>
       <div class="row">

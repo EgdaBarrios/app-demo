@@ -18,6 +18,7 @@ import { Filtrado2Pipe } from './pipe/pipe-searchStatus/filtrado2.pipe';
 import { PipestatusPipe } from './pipe/pipeStatus/pipestatus.pipe';
 import { ClientEditComponent } from './client-edit/client-edit.component';
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -30,15 +31,15 @@ import { ClientEditComponent } from './client-edit/client-edit.component';
     FilterPipe,
     Filtrado2Pipe,
     PipestatusPipe,
-    ClientEditComponent,  
-
+    ClientEditComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ]
 })
 export class DashboardModule { }
