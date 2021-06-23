@@ -1,1 +1,67 @@
-<p>driver-list works!</p>
+<div class="container">
+  <div class="container">
+    <h5 class="sectionTitle">Administración de Conductores</h5>
+  </div>
+
+  <div class="search  mb-4">
+    <form class="searchByName">
+      <span class="searchLabel">Conductor:</span>
+      <div class="form-group form-inline">
+        <input class="form-control ml-2" type="text"/>
+        <button type="button" class="btn btn-primary"><span class="bi-x-lg"></span></button>
+      </div>
+    </form>
+    <form class="searchByCarplate">
+      <span class="searchLabel">Placa:</span>
+      <div class="form-group form-inline">
+        <input class="form-control ml-2" type="text"/>
+        <button type="button" class="btn btn-primary"><span class="bi-x-lg"></span></button>
+      </div>
+    </form>
+    <div class="searchByStatus">
+      <span class="searchLabel">Status:</span>
+      <select class="form-select form-select-md" aria-label=".form-select-sm example">
+        <option selected value="">---</option>
+        <option value="A">Activo</option>
+        <option value="I">Inactivo</option>
+      </select>
+    </div>
+  </div>
+
+  <table class="table table-sm table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre Completo</th>
+        <th scope="col">DNI</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">Placa</th>
+        <th scope="col">Fch Registro</th>
+        <th scope="col">Ult Servicio</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          César Mauricio
+        </td>
+        <td>25759810</td>
+        <td>998945003</td>
+        <td>AQZ830</td>
+        <td>01/01/2020</td>
+        <td>20/06/2020 16:21</td>
+        <td>Activo</td>
+        <td class="edit-btn" >
+          <a 
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/dashboard/driver-edit']"
+          >
+            <span class="bi-pencil-square"></span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

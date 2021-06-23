@@ -1,0 +1,48 @@
+.sectionTitle {
+  padding: 30px 10px;
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:center;
+  align-items: center;
+}
+.searchByName {
+  width: 40%;
+}
+.searchByCarplate {
+  width: 30%;
+  margin-right: 15px;
+}
+.searchByStatus {
+  width: 30%;
+}
+.searchByName,
+.searchByStatus,
+.searchByCarplate {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:center;
+  align-items: center;
+}
+.searchLabel {
+  width: 20%;
+}
+.form-group,
+.form-control,
+.form-select {
+  width: 80%;
+  margin: 0px;
+}
+.edit-btn {
+  width: 12px;
+  height: 12px;
+  margin: 0px;
+  padding: 0px;
+  /*padding: 15px 20px;*/
+}
+td {
+  padding: 8px;
+}

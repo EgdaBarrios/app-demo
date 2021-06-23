@@ -8,10 +8,10 @@
   align-items: center;
 }
 .searchByName {
-  width: 50%;
+  width: 40%;
 }
 .searchByStatus {
-  width: 40%;
+  width: 30%;
 }
 .searchByName,
 .searchByStatus {
@@ -24,6 +24,7 @@
   width: 20%;
 }
 .form-group,
+.form-control,
 .form-select {
   width: 80%;
   margin: 0;
