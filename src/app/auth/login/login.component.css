@@ -16,7 +16,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(29, 29, 28);
+  background-color: rgb(241, 196, 145);
+  /*background-color: rgb(29, 29, 28);*/
 }
 .image {
   width: 100%;

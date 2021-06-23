@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClientEditComponent } from './dashboard/client-edit/client-edit.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
@@ -55,12 +53,6 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       }
-      /*
-      {
-        path: 'dashboard/homeAdmin/:id',
-        component: DashboardComponent
-      }
-      */
     ]
   },
 ];

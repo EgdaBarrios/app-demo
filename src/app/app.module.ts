@@ -14,8 +14,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 // import { AngularFireStorageModule } from '@angular/fire/storage';
 // Forms
 import { ReactiveFormsModule } from '@angular/forms';
-// Services
-import { ClientSrvService } from './services/client-srv.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +31,7 @@ import { ClientSrvService } from './services/client-srv.service';
     AngularFirestoreModule
     // AngularFireStorageModule
   ],
-  providers: [ClientSrvService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

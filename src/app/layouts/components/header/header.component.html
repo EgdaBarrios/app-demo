@@ -8,7 +8,7 @@
             <ul class="navbar-nav">
               <li ngbDropdown class="nav-item dropdown">
                 <a ngbDropdownToggle class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="auth.user | async as user">
-                  <code>{{user.email}}</code>
+                  <code class="active-link">{{user.email}}</code>
                 </a>
                 <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
                   <li>

@@ -4,10 +4,10 @@ import { ClientsService } from 'src/app/services/clients.service';
 
 @Component({
   selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.css'],
+  templateUrl: './client-list.component.html',
+  styleUrls: ['./client-list.component.css'],
 })
-export class ClientsComponent implements OnInit {
+export class ClientListComponent implements OnInit {
   Clientes:any[]=[];
   constructor(private _ClientServices: ClientsService) {
 

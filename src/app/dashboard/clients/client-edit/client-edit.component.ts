@@ -42,7 +42,7 @@ export class ClientEditComponent implements OnInit {
           nro_document: '',
           sex_id: '',
           type_id: '',
-          status: '',
+          status: ''
         });
       }
   

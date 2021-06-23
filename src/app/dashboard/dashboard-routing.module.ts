@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ClientsComponent } from './clients/clients.component';
 import { DashboardComponent } from './dashboard.component';
-import { DriversComponent } from './drivers/drivers.component';
+import { ClientListComponent } from './clients/client-list/client-list.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ClientEditComponent } from './client-edit/client-edit.component';
-import { ClientTravelsComponent } from './client-travels/client-travels.component';
-import { ClientListComponent } from './client-list/client-list.component';
+import { DriverListComponent } from './drivers/driver-list/driver-list.component';
 
 const routes: Routes = [
   {
@@ -24,28 +21,13 @@ const routes: Routes = [
         component: HomeAdminComponent
       },
       {
-        path: 'drivers',
-        component: DriversComponent
-      },
-      // Path 1
-      {
         path: 'clients',
-        component: ClientsComponent
-      },
-      {
-        path: 'client-edit/:id',
-        component: ClientEditComponent
-      },
-      {
-        path: 'client-travels/:id',
-        component: ClientTravelsComponent
-      },
-      // Path 2
-      {
-        path: 'client-list',
         component: ClientListComponent
-      },
-      //---------    
+      }, 
+      {
+        path: 'drivers',
+        component: DriverListComponent
+      }, 
       {
         path: 'profile',
         component: ProfileComponent
