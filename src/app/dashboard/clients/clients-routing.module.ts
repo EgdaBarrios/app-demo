@@ -1,26 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClientEditComponent } from './client-edit/client-edit.component';
+
+import { ClientsComponent } from './clients.component';
 import { ClientListComponent } from './client-list/client-list.component';
+import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ClientTravelsComponent } from './client-travels/client-travels.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ClientListComponent,
+    component: ClientsComponent,
     children: [
       {
-        path: 'clients',
+        path: 'client-list',
         component: ClientListComponent
       },
       {
-        path: 'client-edit/:id',
+        path: 'client-edit',
         component: ClientEditComponent
       },
       {
-        path: 'client-travels/:id',
+        path: 'client-travels',
         component: ClientTravelsComponent
-      }, 
+      },
+      { path: '', redirectTo: 'client-list', pathMatch: 'full' }
     ]
   }
 ];

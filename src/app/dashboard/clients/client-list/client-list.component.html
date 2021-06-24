@@ -1,8 +1,4 @@
 <div class="container">
-  <div class="container">
-    <h5 class="sectionTitle">Administración de Clientes</h5>
-  </div>
-
   <div class="search  mb-4">
     <form class="searchByName">
       <span class="searchLabel">Cliente: </span>
@@ -39,7 +35,7 @@
           <a 
             class="nav-link active"
             aria-current="page"
-            [routerLink]="['/dashboard/client-edit',clients.id]"
+            [routerLink]="['/dashboard/clients/client-edit',clients.id]"
           >
             <span class="bi-pencil-square"></span>
           </a>
