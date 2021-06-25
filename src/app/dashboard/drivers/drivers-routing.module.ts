@@ -15,7 +15,7 @@ const routes: Routes = [
         component: DriverListComponent
       },
       {
-        path: 'driver-edit/:id',
+        path: 'driver-edit',
         component: DriverEditComponent
       },
       { path: '', redirectTo: 'driver-list', pathMatch: 'full' }
