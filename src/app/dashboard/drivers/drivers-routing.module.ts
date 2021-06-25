@@ -3,20 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DriverListComponent } from './driver-list/driver-list.component';
 import { DriverEditComponent } from './driver-edit/driver-edit.component';
+import { DriversComponent } from './drivers.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DriverListComponent,
+    component: DriversComponent,
     children: [
       {
-        path: 'drivers',
+        path: 'driver-list',
         component: DriverListComponent
       },
       {
         path: 'driver-edit/:id',
         component: DriverEditComponent
-      }
+      },
+      { path: '', redirectTo: 'driver-list', pathMatch: 'full' }
     ]
   }
 ];

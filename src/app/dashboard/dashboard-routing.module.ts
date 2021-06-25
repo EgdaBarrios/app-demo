@@ -23,6 +23,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./clients/clients.module').then((m) => m.ClientsModule),
       },
+      {
+        path: 'drivers',
+        loadChildren: () =>
+          import('./drivers/drivers.module').then((m) => m.DriversModule),
+      },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   }

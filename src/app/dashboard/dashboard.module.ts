@@ -12,13 +12,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from '../layouts/components/header/header.component';
 import { AsideComponent } from '../layouts/components/aside/aside.component';
-/*
-import { FilterPipe } from './pipe/pipe-search/filter.pipe';
-import { Filtrado2Pipe } from './pipe/pipe-searchStatus/filtrado2.pipe';
-import { PipestatusPipe } from './pipe/pipeStatus/pipestatus.pipe';
-import { PipeStatus2Pipe } from './pipe/pipetime/pipe-status2.pipe';
-*/
-
 
 @NgModule({
   declarations: [
@@ -27,11 +20,7 @@ import { PipeStatus2Pipe } from './pipe/pipetime/pipe-status2.pipe';
     AsideComponent,
     HomeAdminComponent,
     ClientsComponent,
-    ProfileComponent,/*
-    FilterPipe,
-    Filtrado2Pipe,
-    PipestatusPipe,
-    PipeStatus2Pipe*/
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
@@ -39,12 +28,6 @@ import { PipeStatus2Pipe } from './pipe/pipetime/pipe-status2.pipe';
     NgbModule,
     FormsModule,
     ReactiveFormsModule
-  ],
-  exports: [
-    FilterPipe,
-    Filtrado2Pipe,
-    PipestatusPipe,
-    PipeStatus2Pipe 
   ]
 })
 export class DashboardModule { }

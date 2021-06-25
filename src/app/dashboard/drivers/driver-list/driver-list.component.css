@@ -1,22 +1,19 @@
-.sectionTitle {
-  padding: 30px 10px;
-}
 .search {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content:center;
+  justify-content: stretch;
   align-items: center;
 }
 .searchByName {
   width: 40%;
 }
 .searchByCarplate {
-  width: 30%;
+  width: 35%;
   margin-right: 15px;
 }
 .searchByStatus {
-  width: 30%;
+  width: 25%;
 }
 .searchByName,
 .searchByStatus,
@@ -24,7 +21,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content:center;
+  justify-content:flex-start;
   align-items: center;
 }
 .searchLabel {
