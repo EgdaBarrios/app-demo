@@ -1,1 +1,79 @@
-<p>driver-doc works!</p>
+<div class="container">
+  <div class="container">
+    <h6 class="sectionSubTitle">Información del Conductor</h6>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="sectionLabel active ua" routerLinkActive="active">
+        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit']">Generales</a>
+      </div>
+      <div class="sectionLabel unactive ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle']">Vehículo</a>
+      </div>
+      <div class="sectionLabel active">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc']">Documentación</a>
+      </div>
+      <div class="sectionLabel unactive ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection']">Ficha Inspección</a>
+      </div>
+      <div class="sectionLabel active ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState']">Visita y Estado</a>
+      </div>
+    </header>
+
+    <main> 
+      <form>
+        <div class="row">
+          <div class="fullName form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="state form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
+          </div>
+        </div>
+
+        <div class="docTable mx-4 my-3">
+          <table class="table table-sm table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Nombre Documento</th>
+                <th scope="col">Fch Registro</th>
+                <th scope="col">Fch Vigencia</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Comentario</th>
+                <th scope="col">Descarga</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>DNI adelante</td>
+                <td>01/06/2021</td>
+                <td>
+                  <div class="date form-group form-inline mb-3">
+                    <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
+                  </div>
+                </td>
+                <td>VIGENTE</td>
+                <td>
+                  <div class="mb-3">
+                    <textarea class="form-control text-area" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </td>
+                <td>
+                  <div class="download">
+                    <button type="submit" class="btn btn-primary"><span class="bi-download"></span></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </form>
+    </main>
+  </div>
+</div>
