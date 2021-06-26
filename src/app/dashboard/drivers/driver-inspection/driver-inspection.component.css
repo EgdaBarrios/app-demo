@@ -79,7 +79,7 @@ main {
 }
 .date,
 .time,
-.state,
+.state-modal,
 .comment {
   width: 100%;
 }
