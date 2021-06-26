@@ -35,7 +35,7 @@ footer {
   background-color: rgb(232, 235, 235);
 }
 main {
-  height: 700px;
+  height: 550px;
 }
 .row {
   width: 100%;
@@ -47,56 +47,38 @@ main {
   justify-content:flex-start;
   align-items: center;
 }
-.docType,
-.docNum,
-.idSex,
-.docState {
-  width: 25%;
-}
 .form-group {
   padding-top: 18px;
 }
 .form-control {
   width: 100%;
 }
-.idSex {
+.fullName {
+  width: 75%;
+}
+.state {
+  width: 25%;
+}
+.carPlate,
+.carColor,
+.fabYear,
+.carPermit {
+  width: 25%;
+}
+.carBrand,
+.carModel,
+.propCard {
+  width: 33%;
+}
+.carImg {
+  width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:space-between;
-}
-.checkRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
-.name {
-  width: 33.33%;
-}
-.form-group {
-  padding-top: 18px;
-}
-.form-control {
+.image {
   width: 100%;
-}
-.adress {
-  width: 100%;
-}
-.department,
-.province,
-.district {
-  width: 33.33%;
-}
-.email {
-  width: 66.66%;
-}
-.date {
-  width: 33.33%;
-}
-.licenceNum,
-.phone {
-  width: 33.33%;
 }
 footer {
   padding: 20px 10px;

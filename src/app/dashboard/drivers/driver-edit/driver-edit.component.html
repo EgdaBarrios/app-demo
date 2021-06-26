@@ -25,82 +25,106 @@
     <main> 
       <form>
         <div class="row">
-          <div class="fullName form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2">
-          </div>
-          <div class="state form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Estado</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="carPlate form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Placa</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2">
-          </div>
-          <div class="carColor">
-            <span class="inputLabel">Color</span>
+          <div class="docType">
+            <span class="inputLabel">Tipo Doc</span>
             <select class="form-select form-select-md" aria-label=".form-select-sm example">
-              <option value="N">Negro</option>
-              <option value="B">Blanco</option>
+              <option value="D">DNI</option>
+              <option value="CE">Carnet de Extrangeria</option>
+            </select> 
+          </div>
+          <div class="docNum form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="idSex">
+            <span class="inputLabel">Sexo</span> 
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="M">Masculino</option>
+              <option value="F">Femenino</option>
             </select>
           </div>
-          <div class="fabYear form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Año Fabricación</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
-          </div>
-          <div class="carPermit form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nro Permiso</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+          <div class="docState">
+            <span class="inputLabel">Estado</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="A">Activo</option>
+              <option value="I">Inactivo</option>
+            </select>
           </div>
         </div>
 
         <div class="row">
-          <div class="carBrand form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Marca</label>
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombres</label>
             <input type="text" class="form-control" id="exampleFormControlInput2">
           </div>
-          <div class="carModel form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Modelo</label>
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
             <input type="text" class="form-control" id="exampleFormControlInput3">
           </div>
-          <div class="propCard form-group form-inline mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Tarjeta Propiedad</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
+            <input type="text" class="form-control" id="exampleFormControlInput4">
           </div>
         </div>
 
         <div class="row">
-          <div class="carImg">
-            <img class="image" src="assets/images/drivers_car_img1.png">
-            <div class="form-check my-2">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Se Publica
-              </label>
-            </div>
+          <div class="adress form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
           </div>
+        </div>
 
-          <div class="carImg">
-            <img class="image" src="assets/images/drivers_car_img1.png">
-            <div class="form-check my-2">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Se Publica
-              </label>
-            </div>
+        <div class="row">
+          <div class="department">
+            <span class="inputLabel">Departamento</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="L">Lima</option>
+            </select>
           </div>
+          <div class="province">
+            <span class="inputLabel">Provincia</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="L">Lima</option>
+            </select>
+          </div>
+          <div class="district">
+            <span class="inputLabel">Distrito</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="L">Lima</option>
+            </select>
+          </div>
+        </div>
 
-          <div class="carImg">
-            <img class="image" src="assets/images/drivers_car_img1.png">
-            <div class="form-check my-2">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Se Publica
-              </label>
-            </div>
+        <div class="row">
+          <div class="adress form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Referencia</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="email form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="date form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
+            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="licenceNum form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nro Brevete</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="date form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fch Vencimiento Brevete</label>
+            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
+          </div>
+          <div class="phone form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Móvil</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
           </div>
         </div>
       </form>
