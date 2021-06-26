@@ -16,12 +16,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(241, 196, 145);
-  /*background-color: rgb(29, 29, 28);*/
+  background-color: #4d4f5c13;
 }
 .image {
-  width: 100%;
+  width: 90%;
   height: auto;
+}
+.logo-img {
+  width: 30%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.welcome-text {
+  color: #4D4F5C;opacity:0.5;
+  font-size: 16px;
 }
 .loginForm {
   display: flex;
@@ -38,6 +46,19 @@
   align-items: center;
 }
 form {
-  width: 60%;
+  width: 65%;
   padding-top: 20px;
+}
+.form-label {
+  color: #43425D;
+}
+.form-control {
+  border-bottom: 1.5px solid #4D4F5C;opacity:0.2;
+}
+.submit-btn {
+  width: 45%;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  background-color: #43425D;
 }

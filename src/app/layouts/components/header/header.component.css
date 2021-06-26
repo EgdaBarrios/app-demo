@@ -9,7 +9,10 @@
   text-align: center;
 }
 .navbar-brand,
+.greeting-text {
+  color: #707070;
+}
 .active-link,
 .nav-link {
-  color: rgb(243, 130, 24);
+  color: black;
 }

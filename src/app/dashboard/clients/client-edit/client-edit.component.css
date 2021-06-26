@@ -23,6 +23,9 @@ header {
 .unactive {
   background-color: rgb(209, 212, 212);
 }
+.ua {
+  border-bottom: 1px solid #F3F6F9;
+}
 main,
 footer {
   background-color: rgb(232, 235, 235);
