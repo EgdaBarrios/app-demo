@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  height: auto;
+}
+.sectionSubTitle {
+  padding-bottom: 20px;
+}
+header {
+  width: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.sectionLabel {
+  width: 18%;
+  margin: 0px 5px;
+  padding: 8px 4px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 0 20px 0 0;
+}
+.active {
+  background-color: rgb(232, 235, 235);
+}
+.unactive {
+  background-color: rgb(209, 212, 212);
+}
+.ua {
+  border-bottom: 1px solid #F3F6F9;
+}
+main,
+footer {
+  background-color: rgb(209, 212, 212);
+}
+main {
+  height: 550px;
+}
+.row {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.form-group {
+  padding-top: 18px;
+}
+.form-control {
+  width: 100%;
+}
+.fullName {
+  width: 75%;
+}
+.state {
+  width: 25%;
+}
+.w-b {
+  border: 1px solid rgb(134, 133, 133);
+  box-sizing: border-box;
+}
+/* Modal */
+.modal-body {
+  width: 100%;
+}
+.row-modal {
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 5px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.date,
+.time,
+.state,
+.comment {
+  width: 100%;
+}
+.row-modal-comment {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 5px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
