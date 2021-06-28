@@ -10,14 +10,14 @@
       <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
         <div class="mb-3">
           <label for="inputEmail" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" formControlName="email"/>
+          <input type="email" class="form-control" formControlName="email" pattern="[^\s@]+@[^\s@]+\.[^\s@]{2,}$"/>
         </div>
         <div class="mb-5">
           <label for="inputPassword" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" formControlName="password"/>
+          <input type="password" class="form-control" formControlName="password" minlength="6" required/>
         </div>
         <div class="d-grid gap-2">
-          <button type="submit" class="btn submit-btn">Iniciar Sesión</button>
+          <button type="submit" class="btn submit-btn" [disabled]="loginForm.invalid">Iniciar Sesión</button>
           <!--<button type="submit" class="btn btn-primary" (click)="customLogin()">Ingresar con contraseña</button>
           <button type="submit" class="btn btn-secondary" (click)="loginWithGoogle()">Ingresar con Google</button>-->
         </div>
