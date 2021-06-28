@@ -1,1 +1,138 @@
-<p>driver-edit works!</p>
+<div class="container">
+  <div class="container">
+    <h6 class="sectionSubTitle">Información del Conductor</h6>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="sectionLabel active" routerLinkActive="active">
+        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit']">Generales</a>
+      </div>
+      <div class="sectionLabel unactive ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle']">Vehículo</a>
+      </div>
+      <div class="sectionLabel active ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc']">Documentación</a>
+      </div>
+      <div class="sectionLabel unactive ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection']">Ficha Inspección</a>
+      </div>
+      <div class="sectionLabel active ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState']">Visita y Estado</a>
+      </div>
+    </header>
+
+    <main> 
+      <form>
+        <div class="row">
+          <div class="docType">
+            <span class="inputLabel">Tipo Doc</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="D">DNI</option>
+              <option value="CE">Carnet de Extrangeria</option>
+            </select> 
+          </div>
+          <div class="docNum form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="idSex">
+            <span class="inputLabel">Sexo</span> 
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="M">Masculino</option>
+              <option value="F">Femenino</option>
+            </select>
+          </div>
+          <div class="docState">
+            <span class="inputLabel">Estado</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="A">Activo</option>
+              <option value="I">Inactivo</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
+          </div>
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
+            <input type="text" class="form-control" id="exampleFormControlInput4">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="adress form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="department">
+            <span class="inputLabel">Departamento</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="L">Lima</option>
+            </select>
+          </div>
+          <div class="province">
+            <span class="inputLabel">Provincia</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="L">Lima</option>
+            </select>
+          </div>
+          <div class="district">
+            <span class="inputLabel">Distrito</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="L">Lima</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="adress form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Referencia</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="email form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="date form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
+            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="licenceNum form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nro Brevete</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="date form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fch Vencimiento Brevete</label>
+            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
+          </div>
+          <div class="phone form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Móvil</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
+          </div>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div class=" container navbar-nav-scroll">
+        <button type="submit" class="btn btn-primary"><span class="bi-save"></span>Guardar</button>
+      </div>
+    </footer>
+  </div>
+</div>

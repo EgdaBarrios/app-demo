@@ -1,0 +1,103 @@
+.container {
+  width: 100%;
+  height: auto;
+}
+.sectionSubTitle {
+  padding-bottom: 20px;
+}
+header {
+  width: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.sectionLabel {
+  width: 18%;
+  margin: 0px 5px;
+  padding: 8px 4px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 0 20px 0 0;
+}
+.active {
+  background-color: rgb(232, 235, 235);
+}
+.unactive {
+  background-color: rgb(209, 212, 212);
+}
+.ua {
+  border-bottom: 1px solid #F3F6F9;
+}
+main,
+footer {
+  background-color: rgb(232, 235, 235);
+}
+main {
+  height: 700px;
+}
+.row {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.docType,
+.docNum,
+.idSex,
+.docState {
+  width: 25%;
+}
+.form-group {
+  padding-top: 18px;
+}
+.form-control {
+  width: 100%;
+}
+.idSex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:space-between;
+}
+.checkRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.name {
+  width: 33.33%;
+}
+.form-group {
+  padding-top: 18px;
+}
+.form-control {
+  width: 100%;
+}
+.adress {
+  width: 100%;
+}
+.department,
+.province,
+.district {
+  width: 33.33%;
+}
+.email {
+  width: 66.66%;
+}
+.date {
+  width: 33.33%;
+}
+.licenceNum,
+.phone {
+  width: 33.33%;
+}
+footer {
+  padding: 20px 10px;
+}

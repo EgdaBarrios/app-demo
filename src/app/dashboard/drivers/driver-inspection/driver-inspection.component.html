@@ -1,0 +1,124 @@
+<div class="container">
+  <div class="container">
+    <h6 class="sectionSubTitle">Información del Conductor</h6>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="sectionLabel active ua" routerLinkActive="active">
+        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit']">Generales</a>
+      </div>
+      <div class="sectionLabel unactive ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle']">Vehículo</a>
+      </div>
+      <div class="sectionLabel active ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc']">Documentación</a>
+      </div>
+      <div class="sectionLabel unactive">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection']">Ficha Inspección</a>
+      </div>
+      <div class="sectionLabel active ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState']">Visita y Estado</a>
+      </div>
+    </header>
+
+    <main> 
+      <form>
+        <div class="row">
+          <div class="fullName form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="state form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
+          </div>
+        </div>
+      </form>
+
+      <div class="row">
+        <div class="w-b">
+          <h6>Programación de Visitas</h6>
+          <div class="add float-right mb-2">
+            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span class="bi-plus-lg"></span></button>
+          </div>
+          <table class="table table-sm table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Fch Visita</th>
+                <th scope="col">Hora Visita</th>
+                <th scope="col">Comentario</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acción</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>01/06/2020</td>
+                <td>08:30</td>
+                <td>Todo conforme</td>
+                <td>Ejecutado</td>
+                <td>
+                  <div class="edit">
+                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <span class="bi-pencil-fill"></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Nueva/Editar Visita</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row-modal">
+            <div class="date form-group form-inline mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Fecha visita</label>
+              <input type="date" class="form-control" id="exampleFormControlInput2">
+            </div>
+          </div>
+          <div class="row-modal">
+            <div class="time form-group form-inline mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Hora visita</label>
+              <input type="text" class="form-control" id="exampleFormControlInput3">
+            </div>
+          </div>
+          <div class="row-modal">
+            <div class="state-modal">
+              <span class="label">Estado:</span>
+              <select class="form-select form-select-md" aria-label=".form-select-sm example">
+                <option selected value="">---</option>
+                <option value="E">Ejecutado</option>
+                <option value="P">Pendiente</option>
+              </select>
+            </div>
+          </div>
+          <div class="row-modal-comment">
+            <div class="comment">
+              <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </div>         
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+<div class="container">
+  <div class="container">
+    <h6 class="sectionSubTitle">Información del Conductor</h6>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="sectionLabel active ua" routerLinkActive="active">
+        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit']">Generales</a>
+      </div>
+      <div class="sectionLabel unactive">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle']">Vehículo</a>
+      </div>
+      <div class="sectionLabel active ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc']">Documentación</a>
+      </div>
+      <div class="sectionLabel unactive ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection']">Ficha Inspección</a>
+      </div>
+      <div class="sectionLabel active ua">
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState']">Visita y Estado</a>
+      </div>
+    </header>
+
+    <main> 
+      <form>
+        <div class="row">
+          <div class="fullName form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="state form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="carPlate form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Placa</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="carColor">
+            <span class="inputLabel">Color</span>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example">
+              <option value="N">Negro</option>
+              <option value="B">Blanco</option>
+            </select>
+          </div>
+          <div class="fabYear form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Año Fabricación</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
+          </div>
+          <div class="carPermit form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nro Permiso</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="carBrand form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Marca</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2">
+          </div>
+          <div class="carModel form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Modelo</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
+          </div>
+          <div class="propCard form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Tarjeta Propiedad</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="carImg">
+            <img class="image" src="assets/images/drivers_car_img1.png">
+            <div class="form-check my-2">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Se Publica
+              </label>
+            </div>
+          </div>
+
+          <div class="carImg">
+            <img class="image" src="assets/images/drivers_car_img1.png">
+            <div class="form-check my-2">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Se Publica
+              </label>
+            </div>
+          </div>
+
+          <div class="carImg">
+            <img class="image" src="assets/images/drivers_car_img1.png">
+            <div class="form-check my-2">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Se Publica
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div class=" container navbar-nav-scroll">
+        <button type="submit" class="btn btn-primary"><span class="bi-save"></span>Guardar</button>
+      </div>
+    </footer>
+  </div>
+</div>
+

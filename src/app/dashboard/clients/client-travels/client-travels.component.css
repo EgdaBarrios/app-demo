@@ -1,5 +1,5 @@
-.sectionTitle {
-  padding: 30px 10px;
+.sectionSubTitle {
+  padding-bottom: 20px;
 }
 header {
   width: 100%;
@@ -13,6 +13,7 @@ header {
   width: 15%;
   margin: 0px 5px;
   padding: 8px;
+  font-size: 14px;
   text-align: center;
   border-radius: 0 20px 0 0;
 }
@@ -21,6 +22,9 @@ header {
 }
 .unactive {
   background-color: rgb(209, 212, 212);
+}
+.ua {
+  border-bottom: 1px solid #F3F6F9;
 }
 main {
   height: 500px;

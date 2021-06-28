@@ -1,28 +1,26 @@
 <div class="section">
-  <div class="container">
+  <a class="navbar-brand" href="#">
+    <img class="logo" src="assets/images/DritixBLANCO.png">
+  </a>
+  <div>
     <nav>
-      <a class="navbar-brand" href="#">
-        <img class="logo" src="assets/images/logodritix.png">
-      </a>
-      <ul>
-        <li class="dashboard-item active" routerLinkActive="active">
+      <ul class="dashboard-group">
+        <li class="dashboard-item active mt-3" routerLinkActive="active">
           <a
             class="nav-link"
             aria-current="page"
             routerLink="/dashboard/homeAdmin">
-            <span class="bi-house-door mr-3"></span>Inicio</a>
+            <span class="bi-columns-gap mr-3"></span>Menú</a>
         </li>
       </ul>
-      <ul>
-        <li>
-          <h5 class="dashboard-item-header py-3">Conductores</h5>
-        </li>
+      <ul class="dashboard-group">
+        <h5 class="dashboard-item-header px-3 py-3">Conductores</h5>
         <li class="dashboard-item" routerLinkActive="active">
           <a
             class="nav-link"
             aria-current="page"
-            routerLink="/dashboard/drivers">
-            <span class="bi-speedometer2 mr-3"></span>Lista de Conductores</a>
+            routerLink="/dashboard/drivers">       
+            <span class="bi-speedometer2 mr-3"></span>Lista</a>
         </li>
         <li class="dashboard-item" routerLinkActive="active">
           <a
@@ -39,17 +37,14 @@
             <span class="bi-card-checklist mr-3"></span>Estado de cuenta</a>
         </li>
       </ul>
-      <ul>
-        <li>
-          <h5 class="dashboard-item-header py-3">Clientes</h5>
-        </li>
+      <ul class="dashboard-group">
+        <h5 class="dashboard-item-header px-3 py-3">Clientes</h5>
         <li class="dashboard-item" routerLinkActive="active">
-          <!--<a class="nav-link" aria-current="page" routerLink="/dashboard/client-list">Lista de</a>-->
           <a
             class="nav-link"
             aria-current="page"
-            routerLink="/dashboard/clients">
-            <span class="bi-people-fill mr-3"></span>Usuarios</a>
+            routerLink="/dashboard/clients">            
+            <span class="bi-people-fill mr-3"></span>Lista</a>
         </li>
         <li class="dashboard-item" routerLinkActive="active">
           <a
