@@ -67,20 +67,22 @@ export class ClientTravelsComponent implements OnInit {
               address: extraAddress.payload.doc.data()['address'],
             })
           }) 
+          this.ClientesResult = this.Clientes.map((result1) => {
+            const id_document = result1.id_document
+            this.Array.map((result2) => {
+              const id_document2 = result2.id_document
+              console.log(result2);
+              console.log("ID2", id_document2);
+              if (id_document == id_document2) {
+                result1.destination_address = result1.destination_address.concat(' / ' + result2.address)
+                console.log(result1.destination_address);
+              }
+            })
+            return result1
+          })
         })
+
       })
-      // this.ClientesResult = this.Clientes.map((result1) => {
-      //   const id_document = result1.id_document
-      //   this.Array.map((result2) => {
-      //     const id_document2 = result2.id_document
-      //     console.log("ID2", id_document2);
-      //     if (id_document == id_document2) {
-      //       result1.destination_address = result1.destination_address.concat(' / ' + result2.address)
-      //       console.log(result1.destination_address);
-      //     }
-      //   })
-      //   return result1
-      //})
     })
     
   }
