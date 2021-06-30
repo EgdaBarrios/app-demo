@@ -6,48 +6,52 @@
   <div class="container">
     <header>
       <div class="sectionLabel active" routerLinkActive="active">
-        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit']">Generales</a>
+        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit',id_Driver]">Generales</a>
       </div>
       <div class="sectionLabel unactive ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle']">Vehículo</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle',id_Driver]">Vehículo</a>
       </div>
       <div class="sectionLabel active ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc']">Documentación</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc',id_Driver]">Documentación</a>
       </div>
       <div class="sectionLabel unactive ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection']">Ficha Inspección</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection',id_Driver]">Ficha Inspección</a>
       </div>
       <div class="sectionLabel active ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState']">Visita y Estado</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState',id_Driver]">Visita y Estado</a>
       </div>
     </header>
 
     <main> 
-      <form>
+      <form [formGroup]="editDriver">
         <div class="row">
           <div class="docType">
             <span class="inputLabel">Tipo Doc</span>
-            <select class="form-select form-select-md" aria-label=".form-select-sm example">
-              <option value="D">DNI</option>
-              <option value="CE">Carnet de Extrangeria</option>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="documentValue" formControlName="document_type">
+              <option *ngFor="let documents of Documents | async" [value]="documents.type_id" >{{documents.type_name}}</option>
             </select> 
           </div>
           <div class="docNum form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
+<<<<<<< HEAD
+            <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="document_number">
+=======
             <input type="number" class="form-control" id="exampleFormControlInput1" min="10000000" minlength="8" maxlength="12" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+>>>>>>> 7495165665aa49bf7b2501ad2337808481d19ee4
           </div>
           <div class="idSex">
             <span class="inputLabel">Sexo</span> 
-            <select class="form-select form-select-md" aria-label=".form-select-sm example">
-              <option value="M">Masculino</option>
-              <option value="F">Femenino</option>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example"  [(ngModel)]="sexValue" formControlName="sex">
+            <option *ngFor="let sex of Sex | async" [value]="sex.sex_id" >{{sex.sex_name}}</option>
             </select>
           </div>
           <div class="docState">
             <span class="inputLabel">Estado</span>
-            <select class="form-select form-select-md" aria-label=".form-select-sm example">
-              <option value="A">Activo</option>
-              <option value="I">Inactivo</option>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="StatusValue" formControlName="status">
+              <option value="Activo">Activo</option>
+              <option value="Registrado">Inactivo</option>
+              <option value="Suspendido">Suspendido</option>
+              <option value="Inhabilitado">Inhabilitado</option>
             </select>
           </div>
         </div>
@@ -55,6 +59,17 @@
         <div class="row">
           <div class="name form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+<<<<<<< HEAD
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="name">
+          </div>
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name">
+          </div>
+          <div class="name form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
+            <input type="text" class="form-control" id="exampleFormControlInput4" formControlName="last_name">
+=======
             <input type="text" class="form-control" id="exampleFormControlInput2" pattern="[A-Za-z]+" required> 
           </div>
           <div class="name form-group form-inline mb-3">
@@ -64,33 +79,38 @@
           <div class="name form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
             <input type="text" class="form-control" id="exampleFormControlInput4" pattern="[A-Za-z]+" required>
+>>>>>>> 7495165665aa49bf7b2501ad2337808481d19ee4
           </div>
         </div>
 
         <div class="row">
           <div class="adress form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+<<<<<<< HEAD
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="address">
+=======
             <input type="text" class="form-control" id="exampleFormControlInput2" maxlength="60">
+>>>>>>> 7495165665aa49bf7b2501ad2337808481d19ee4
           </div>
         </div>
 
         <div class="row">
           <div class="department">
             <span class="inputLabel">Departamento</span>
-            <select class="form-select form-select-md" aria-label=".form-select-sm example">
-              <option value="L">Lima</option>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="departmentValue" formControlName="department">
+              <option *ngFor="let department of Departments | async" [value]="department.department_id" >{{department.department_name}}</option>
             </select>
           </div>
           <div class="province">
             <span class="inputLabel">Provincia</span>
-            <select class="form-select form-select-md" aria-label=".form-select-sm example">
-              <option value="L">Lima</option>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="provinceValue" formControlName="province">
+              <option *ngFor="let province of Provinces | async" [value]="province.province_id" >{{province.province_name}}</option>
             </select>
           </div>
           <div class="district">
             <span class="inputLabel">Distrito</span>
-            <select class="form-select form-select-md" aria-label=".form-select-sm example">
-              <option value="L">Lima</option>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="districtValue" formControlName="district">
+            <option *ngFor="let district of Districts | async" [value]="district.district_id" >{{district.district_name}}</option>
             </select>
           </div>
         </div>
@@ -98,40 +118,56 @@
         <div class="row">
           <div class="adress form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Referencia</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2">
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="reference">
           </div>
         </div>
 
         <div class="row">
           <div class="email form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Correo</label>
+<<<<<<< HEAD
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="email">
+          </div>
+          <div class="date form-group form-inline mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
+            <input type="date" value='dd/mm/yyyy' class="form-control" id="exampleFormControlInput5" placeholder="" formControlName="date_birth">
+=======
             <input type="text" class="form-control" id="exampleFormControlInput2" pattern="[^\s@]+@[^\s@]+\.[^\s@]{2,}$" required>
           </div>
           <div class="date form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
             <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="" max="2009-12-31"> 
+>>>>>>> 7495165665aa49bf7b2501ad2337808481d19ee4
           </div>
         </div>
 
         <div class="row">
           <div class="licenceNum form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nro Brevete</label>
+<<<<<<< HEAD
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="license_number">
+=======
             <input type="text" class="form-control" id="exampleFormControlInput2" maxlength="9" pattern="^[A-Z][0-9]{8}">
+>>>>>>> 7495165665aa49bf7b2501ad2337808481d19ee4
           </div>
           <div class="date form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Fch Vencimiento Brevete</label>
-            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
+            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="" formControlName="date_DueDate">
           </div>
           <div class="phone form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Móvil</label>
+<<<<<<< HEAD
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="phone_number">
+=======
             <input type="text" class="form-control" id="exampleFormControlInput3" pattern="[0-9]{9}">
+>>>>>>> 7495165665aa49bf7b2501ad2337808481d19ee4
           </div>
         </div>
       </form>
     </main>
     <footer>
       <div class=" container navbar-nav-scroll">
-        <button type="submit" class="btn btn-primary"><span class="bi-save"></span>Guardar</button>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()"><span class="bi-save"></span>Guardar</button>
       </div>
     </footer>
   </div>

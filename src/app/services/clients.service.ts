@@ -21,16 +21,14 @@ export class ClientsService {
     return this.firestore.collection('Clients').doc(id).update(data);
   }
 
-  getdataTravels2(id: any) {
+  getdataTravelsWithMultidestionation(id: any) {
     return this.firestore.collection('Travels',ref=>ref.where('client_id','==',id)).snapshotChanges();
   }
 
-  getMoreDestination(id: any){
-    return this.firestore.collection('Travels',ref=>ref.where('client_id','==',id).where('is_multidestination', '==' , true)).snapshotChanges();
+  getMoreDestination(id: any,document_id:any){
+    return this.firestore.collection('Travels',ref=>ref.where('client_id','==',id).where('is_multidestination', '==' , true)).doc(document_id).collection('Destinations').snapshotChanges();
   }
-  getMoreDestination2(ids: any){
-    return this.firestore.collection('Travels').doc(ids).collection('Destinations').get();
-  }
-  
+
+
 }
 

@@ -23,15 +23,15 @@
     </header>
 
     <main> 
-      <form>
+      <form [formGroup]="Driver_Inspect">
         <div class="row">
           <div class="fullName form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2">
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="fullname">
           </div>
           <div class="state form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Estado</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="status">
           </div>
         </div>
       </form>
@@ -54,14 +54,14 @@
             </thead>
 
             <tbody>
-              <tr>
-                <td>01/06/2020</td>
-                <td>08:30</td>
-                <td>Todo conforme</td>
-                <td>Ejecutado</td>
+              <tr *ngFor="let data of dataInspectionSheet">
+                <td>{{data.date_visite}}</td>
+                <td>{{data.inspect_hour}}</td>
+                <td>{{data.inspect_comentary}}</td>
+                <td>{{data.status}}</td>
                 <td>
                   <div class="edit">
-                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
                       <span class="bi-pencil-fill"></span>
                     </button>
                   </div>
@@ -84,40 +84,39 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form [formGroup]="newInspect">
           <div class="row-modal">
             <div class="date form-group form-inline mb-3">
               <label for="exampleFormControlInput1" class="form-label">Fecha visita</label>
-              <input type="date" class="form-control" id="exampleFormControlInput2">
+              <input type="date" class="form-control" id="exampleFormControlInput2" formControlName="date_visite">
             </div>
           </div>
           <div class="row-modal">
             <div class="time form-group form-inline mb-3">
               <label for="exampleFormControlInput1" class="form-label">Hora visita</label>
-              <input type="text" class="form-control" id="exampleFormControlInput3">
+              <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="inspect_hour">
             </div>
           </div>
           <div class="row-modal">
             <div class="state-modal">
               <span class="label">Estado:</span>
-              <select class="form-select form-select-md" aria-label=".form-select-sm example">
-                <option selected value="">---</option>
-                <option value="E">Ejecutado</option>
-                <option value="P">Pendiente</option>
+              <select class="form-select form-select-md" aria-label=".form-select-sm example" formControlName="status">
+                <option value="Ejecutado">Ejecutado</option>
+                <option value="Pendiente">Pendiente</option>
               </select>
             </div>
           </div>
           <div class="row-modal-comment">
             <div class="comment">
               <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="inspect_comentary"></textarea>
             </div>
           </div>         
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-primary" (click)="onSubmit()"data-bs-dismiss="modal">Guardar</button>
       </div>
     </div>
   </div>

@@ -1,6 +1,8 @@
+import { resolve } from '@angular/compiler-cli/src/ngtsc/file_system';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { concat } from 'rxjs';
 import { ClientsService } from 'src/app/services/clients.service';
 
 @Component({
@@ -15,9 +17,9 @@ export class ClientTravelsComponent implements OnInit {
   fullnameClient: FormGroup;
   dataTravel: any;
   Clientes: any[] = [];
-  ClientesWithDestinations: any[] = [];
+  Array: any[] = []
   filtrado2 = "";
-
+  ClientesResult: any[] = [];
 
   constructor(
     private _ClientService: ClientsService,
@@ -33,7 +35,9 @@ export class ClientTravelsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getNameClient()
-    this.getget()
+    this.getTravelAddress()
+
+
   }
 
 
@@ -47,28 +51,40 @@ export class ClientTravelsComponent implements OnInit {
     }
   }
 
-  getget() {
-    this._ClientService.getdataTravels2(this.id).subscribe(data => {
-      this.Clientes = [];
-      data.forEach((element: any) => {
+  getTravelAddress() {
+    this._ClientService.getdataTravelsWithMultidestionation(this.id).subscribe(data => {
+      data.map((dataClient: any) => {
         this.Clientes.push({
-          ids: element.payload.doc.id,
-          ...element.payload.doc.data()
+          id_document: dataClient.payload.doc.id,
+          destination_address: dataClient.payload.doc.data()['destination_address'],
+          ...dataClient.payload.doc.data()
+        })
+        const id_document = dataClient.payload.doc.id
+        this._ClientService.getMoreDestination(this.id, id_document).subscribe(MoreDestination => {
+          MoreDestination.map((extraAddress: any) => {
+            this.Array.push({
+              id_document: dataClient.payload.doc.id,
+              address: extraAddress.payload.doc.data()['address'],
+            })
+          }) 
         })
       })
+      // this.ClientesResult = this.Clientes.map((result1) => {
+      //   const id_document = result1.id_document
+      //   this.Array.map((result2) => {
+      //     const id_document2 = result2.id_document
+      //     console.log("ID2", id_document2);
+      //     if (id_document == id_document2) {
+      //       result1.destination_address = result1.destination_address.concat(' / ' + result2.address)
+      //       console.log(result1.destination_address);
+      //     }
+      //   })
+      //   return result1
+      //})
     })
-    // this._ClientService.getMoreDestination2(this.ids).subscribe(data => {
-    //   console.log("nuevo",data.payload.doc.data()['address'])
-    //   this.ClientesWithDestinations = [];
-    //   data.forEach((element: any) => {
-    //     this.ClientesWithDestinations.push({
-    //       idNuevo: element.payload.doc.id,
-    //       ...element.payload.doc.data()
-    //     })
-    //   })
-      
-    // })
-    
     
   }
+
 }
+
+

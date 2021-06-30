@@ -1,6 +1,5 @@
 import { NgSwitchCase } from '@angular/common';
 import { Pipe, PipeTransform } from '@angular/core';
-import { ClientListComponent } from '../../clients/client-list/client-list.component';
 
 @Pipe({
   name: 'pipestatus'

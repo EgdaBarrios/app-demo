@@ -10,7 +10,7 @@ export class Filtrado2Pipe implements PipeTransform {
     if (arg === '') return value;
         const resultPosts = [];
         for (const clients of value) {
-          if (clients.status.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
+          if (clients.status.indexOf(arg) > -1) {
             resultPosts.push(clients);
           };
         }
