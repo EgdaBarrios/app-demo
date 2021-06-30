@@ -23,7 +23,7 @@
           </div>
           <div class="docNum form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="nro_document" min="10000000" minlength="8" maxlength="12" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required placeholder="">
+            <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="nro_document" pattern="^[0-9]{8}$|[0-9]{12}" minlength="8" maxlength="12" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required placeholder="">
           </div>
           <div class="idSex">
             <span class="inputLabel">Sexo</span> 
