@@ -52,22 +52,22 @@
           </div>
           <div class="carPermit form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nro Permiso</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="vehicle_license">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="vehicle_license" required>
           </div>
         </div>
 
         <div class="row">
           <div class="carBrand form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Marca</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="vehicle_brand">
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="vehicle_brand" required>
           </div>
           <div class="carModel form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Modelo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="vehicle_model">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="vehicle_model" required>
           </div>
           <div class="propCard form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Tarjeta Propiedad</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="property_card">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="property_card" required>
           </div>
         </div>
 
@@ -106,7 +106,7 @@
     </main>
     <footer>
       <div class=" container navbar-nav-scroll">
-        <button type="submit" class="btn btn-primary" (click)="onSubmit()"><span class="bi-save" ></span>Guardar</button>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="editDriver.invalid"><span class="bi-save" ></span>Guardar</button>
       </div>
     </footer>
   </div>
