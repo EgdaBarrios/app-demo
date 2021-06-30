@@ -12,6 +12,7 @@ import { DriverVehicleComponent } from './driver-vehicle/driver-vehicle.componen
 import { DriverDocComponent } from './driver-doc/driver-doc.component';
 import { DriverInspectionComponent } from './driver-inspection/driver-inspection.component';
 import { DriverVisitStateComponent } from './driver-visit-state/driver-visit-state.component';
+import { PipeModule } from '../pipe/pipe.module';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { DriverVisitStateComponent } from './driver-visit-state/driver-visit-sta
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    PipeModule
   ]
 })
 export class DriversModule { }

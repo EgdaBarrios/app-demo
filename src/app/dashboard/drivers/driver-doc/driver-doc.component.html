@@ -23,15 +23,15 @@
     </header>
 
     <main> 
-      <form>
+      <form [formGroup]="editDriver">
         <div class="row">
           <div class="fullName form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2">
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="fullname">
           </div>
           <div class="state form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Estado</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="status">
           </div>
         </div>
 

@@ -19,23 +19,23 @@ const routes: Routes = [
         component: DriverListComponent
       },
       {
-        path: 'driver-edit',
+        path: 'driver-edit/:id_Driver',
         component: DriverEditComponent
       },
       {
-        path: 'driver-vehicle',
+        path: 'driver-vehicle/:id_Driver',
         component: DriverVehicleComponent
       },
       {
-        path: 'driver-doc',
+        path: 'driver-doc/:id_Driver',
         component: DriverDocComponent
       },
       {
-        path: 'driver-inspection',
+        path: 'driver-inspection/:id_Driver',
         component: DriverInspectionComponent
       },
       {
-        path: 'driver-visitState',
+        path: 'driver-visitState/:id_Driver',
         component: DriverVisitStateComponent
       },
       { path: '', redirectTo: 'driver-list', pathMatch: 'full' }

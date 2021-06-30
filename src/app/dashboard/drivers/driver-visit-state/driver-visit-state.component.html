@@ -6,32 +6,32 @@
   <div class="container">
     <header>
       <div class="sectionLabel active ua" routerLinkActive="active">
-        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit']">Generales</a>
+        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit', id_Driver]">Generales</a>
       </div>
       <div class="sectionLabel unactive ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle']">Vehículo</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle', id_Driver]">Vehículo</a>
       </div>
       <div class="sectionLabel active ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc']">Documentación</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc', id_Driver]">Documentación</a>
       </div>
       <div class="sectionLabel unactive ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection']">Ficha Inspección</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection', id_Driver]">Ficha Inspección</a>
       </div>
       <div class="sectionLabel active">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState']">Visita y Estado</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState', id_Driver]">Visita y Estado</a>
       </div>
     </header>
 
     <main> 
-      <form>
+      <form [formGroup]="dataDriver">
         <div class="row">
           <div class="fullName form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2">
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="fullname">
           </div>
           <div class="state form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Estado</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="status">
           </div>
         </div>
       </form>
@@ -53,11 +53,11 @@
             </thead>
 
             <tbody>
-              <tr>
-                <td>Registrado</td>
-                <td>01/06/2021 10:12</td>
-                <td>Solicitud Ingreso</td>
-                <td>---</td>
+             <tr *ngFor="let driver of dataStatusDriver">
+                <td>{{driver.status}}</td>
+                <td>{{driver.date_status.toDate() |date: 'dd/MM/yyyy HH:mm'}}</td>
+                <td>{{driver.status_motive}}</td>
+                <td>{{driver.status_comentary}}</td>
               </tr>
             </tbody>
           </table>
@@ -76,36 +76,35 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form [formGroup]="newStatus">
           <div class="row-modal">
             <div class="state-modal">
               <span class="label">Estado:</span>
-              <select class="form-select form-select-md" aria-label=".form-select-sm example">
-                <option selected value="">---</option>
-                <option value="R">Registrado</option>
-                <option value="A">Activo</option>
-                <option value="S">Suspendido</option>
-                <option value="D">Deshabilitado</option>
+              <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]='statusValue' formControlName="status"> 
+                <option value="Registrado">Registrado</option>
+                <option value="Activo">Activo</option>
+                <option value="Suspendido">Suspendido</option>
+                <option value="Deshabilitado">Deshabilitado</option>
               </select>
             </div>
           </div>
           <div class="row-modal-motive">
             <div class="motive">
               <label for="exampleFormControlTextarea1" class="form-label">Motivo</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"formControlName="status_motive"></textarea>
             </div>
           </div> 
           <div class="row-modal-comment">
             <div class="comment">
               <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="status_comentary"></textarea>
             </div>
           </div>         
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-primary" (click)="onSubmit()" data-bs-dismiss="modal" >Guardar</button>
       </div>
     </div>
   </div>

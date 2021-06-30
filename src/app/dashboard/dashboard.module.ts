@@ -21,13 +21,15 @@ import { AsideComponent } from '../layouts/components/aside/aside.component';
     HomeAdminComponent,
     ClientsComponent,
     ProfileComponent,
+    
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ]
 })
 export class DashboardModule { }

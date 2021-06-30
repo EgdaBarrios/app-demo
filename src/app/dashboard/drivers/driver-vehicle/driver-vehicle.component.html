@@ -6,69 +6,68 @@
   <div class="container">
     <header>
       <div class="sectionLabel active ua" routerLinkActive="active">
-        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit']">Generales</a>
+        <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/drivers/driver-edit',id_Driver]">Generales</a>
       </div>
       <div class="sectionLabel unactive">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle']">Vehículo</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-vehicle',id_Driver]">Vehículo</a>
       </div>
       <div class="sectionLabel active ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc']">Documentación</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-doc',id_Driver]">Documentación</a>
       </div>
       <div class="sectionLabel unactive ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection']">Ficha Inspección</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-inspection',id_Driver]">Ficha Inspección</a>
       </div>
       <div class="sectionLabel active ua">
-        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState']">Visita y Estado</a>
+        <a class="nav-link" [routerLink]="['/dashboard/drivers/driver-visitState',id_Driver]">Visita y Estado</a>
       </div>
     </header>
 
     <main> 
-      <form>
+      <form [formGroup]="editDriver">
         <div class="row">
           <div class="fullName form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2">
+            <input type="text"  class="form-control" id="exampleFormControlInput2" formControlName="fullname">
           </div>
           <div class="state form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Estado</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+            <input type="text"  class="form-control" id="exampleFormControlInput3" formControlName="status">
           </div>
         </div>
 
         <div class="row">
           <div class="carPlate form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Placa</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2">
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="vehicle_plate">
           </div>
           <div class="carColor">
             <span class="inputLabel">Color</span>
-            <select class="form-select form-select-md" aria-label=".form-select-sm example">
-              <option value="N">Negro</option>
-              <option value="B">Blanco</option>
+            <select class="form-select form-select-md" aria-label=".form-select-sm example" [(ngModel)]="Colorvalue" formControlName="vehicle_color">
+              <option *ngFor="let color of Color | async " [value]="color.color_id">{{color.color_name}}</option>
             </select>
           </div>
           <div class="fabYear form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Año Fabricación</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="vehicle_year"> 
           </div>
           <div class="carPermit form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nro Permiso</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="vehicle_license">
           </div>
         </div>
 
         <div class="row">
           <div class="carBrand form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Marca</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2">
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="vehicle_brand">
           </div>
           <div class="carModel form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Modelo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="vehicle_model">
           </div>
           <div class="propCard form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Tarjeta Propiedad</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="property_card">
           </div>
         </div>
 
@@ -107,7 +106,7 @@
     </main>
     <footer>
       <div class=" container navbar-nav-scroll">
-        <button type="submit" class="btn btn-primary"><span class="bi-save"></span>Guardar</button>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()"><span class="bi-save" ></span>Guardar</button>
       </div>
     </footer>
   </div>
