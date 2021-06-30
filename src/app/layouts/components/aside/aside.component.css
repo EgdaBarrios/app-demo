@@ -37,10 +37,11 @@ a:visited {
 /* mouse over link */
 a:hover {
   color: #707070;
-  background-color: #f7921e3a;
+  background-color: #f7921e1f;
 }
 
 /* selected link */
-a:active {
-  color: rgb(243, 130, 24);
+.active {
+  color: #707070;
+  background-color: #f7921e3a;
 }

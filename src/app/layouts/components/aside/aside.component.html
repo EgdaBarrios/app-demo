@@ -1,11 +1,11 @@
 <div class="section">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="assets/images/DritixBLANCO.png">
+  <a class="navbar-brand">
+    <img class="logo" src="assets/images/DritixBLANCOsvg.svg">
   </a>
   <div>
-    <nav>
+    <nav ng-controller="navController">
       <ul class="dashboard-group">
-        <li class="dashboard-item active mt-3" routerLinkActive="active">
+        <li ng-class="{active: isActive('/dashboard/homeAdmin')}" class="dashboard-item mt-3" routerLinkActive="active">
           <a
             class="nav-link"
             aria-current="page"
@@ -15,11 +15,11 @@
       </ul>
       <ul class="dashboard-group">
         <h5 class="dashboard-item-header px-3 py-3">Conductores</h5>
-        <li class="dashboard-item" routerLinkActive="active">
+        <li ng-class="{active: isActive('/dashboard/drivers')}" class="dashboard-item" routerLinkActive="active">
           <a
             class="nav-link"
             aria-current="page"
-            routerLink="/dashboard/drivers">
+            routerLink="/dashboard/drivers">       
             <span class="bi-speedometer2 mr-3"></span>Lista</a>
         </li>
         <li class="dashboard-item" routerLinkActive="active">
@@ -39,11 +39,11 @@
       </ul>
       <ul class="dashboard-group">
         <h5 class="dashboard-item-header px-3 py-3">Clientes</h5>
-        <li class="dashboard-item" routerLinkActive="active">
+        <li ng-class="{active: isActive('/dashboard/clients')}" class="dashboard-item" routerLinkActive="active">
           <a
             class="nav-link"
             aria-current="page"
-            routerLink="/dashboard/clients">
+            routerLink="/dashboard/clients">            
             <span class="bi-people-fill mr-3"></span>Lista</a>
         </li>
         <li class="dashboard-item" routerLinkActive="active">

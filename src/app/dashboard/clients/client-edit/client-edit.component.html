@@ -23,7 +23,7 @@
           </div>
           <div class="docNum form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nro Doc</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="nro_document" placeholder="">
+            <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="nro_document" min="10000000" minlength="8" maxlength="12" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required placeholder="">
           </div>
           <div class="idSex">
             <span class="inputLabel">Sexo</span> 
@@ -43,37 +43,37 @@
         <div class="row">
           <div class="name form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="name" placeholder="">
+            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="name" pattern="[A-Za-z]+" placeholder="">
           </div>
           <div class="name form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Apellido Paterno</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name" placeholder="">
+            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="middle_name" pattern="[A-Za-z]+" placeholder="">
           </div>
           <div class="name form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Apellido Materno</label>
-            <input type="text" class="form-control" id="exampleFormControlInput4" formControlName="last_name" placeholder="">
+            <input type="text" class="form-control" id="exampleFormControlInput4" formControlName="last_name" pattern="[A-Za-z]+" placeholder="">
           </div>
         </div>
 
         <div class="row">
           <div class="name form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Fch Nacimiento</label>
-            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="">
+            <input type="date" class="form-control" id="exampleFormControlInput5" placeholder="" max="2009-12-31">
           </div>
           <div class="name form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Móvil</label>
-            <input type="string" class="form-control" id="exampleFormControlInput6" formControlName="phone_number" placeholder="">
+            <input type="string" class="form-control" id="exampleFormControlInput6" formControlName="phone_number" pattern="[0-9]{9}" placeholder="">
           </div>
           <div class="name form-group form-inline mb-3">
             <label for="exampleFormControlInput1" class="form-label">Correo</label>
-            <input type="email" class="form-control" id="exampleFormControlInput7" formControlName="email" placeholder="">
+            <input type="email" class="form-control" id="exampleFormControlInput7" formControlName="email" pattern="[^\s@]+@[^\s@]+\.[^\s@]{2,}$" placeholder="">
           </div>
         </div>
       </form>
     </main>
     <footer>
       <div class=" container navbar-nav-scroll">
-        <button type="submit" class="btn btn-primary" (click)="onSubmit()"><span class="bi-save"></span>Guardar</button>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="editClient.invalid"><span class="bi-save"></span>Guardar</button>
       </div>
     </footer>
   </div>
