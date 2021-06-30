@@ -49,7 +49,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let client of Clientes | filtrado2: filtrado2">
+              <tr *ngFor="let client of ClientesResult | filtrado2: filtrado2">
                 <td>{{client.date_travel.toDate() |date: 'dd,MM,yyyy HH:mm'}}</td>
                 <td>{{client.origin_address}}</td>
                 <td>{{client.destination_address}}</td>
